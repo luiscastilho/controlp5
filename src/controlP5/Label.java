@@ -156,6 +156,12 @@ public class Label implements CDrawable {
 		}
 	}
 
+	public void draw( PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController, boolean outlineText ) {
+		if ( isVisible ) {
+			getLabeltype( ).draw( this , theGraphics , theX , theY , theController, outlineText );
+		}
+	}
+
 	public void draw( PGraphics theGraphics , int theX , int theY , int theW , int theH ) {
 		if ( isVisible ) {
 			getLabeltype( ).draw( this , theGraphics , theX , theY , theW , theH );
@@ -194,6 +200,35 @@ public class Label implements CDrawable {
 			}
 			theGraphics.translate( _myControllerStyle.paddingLeft , _myControllerStyle.paddingTop );
 			_myFontLabel.draw( theGraphics , this );
+			theGraphics.popMatrix( );
+		}
+	}
+
+	public void draw( PGraphics theGraphics , int theX , int theY, boolean outlineText ) {
+		if ( isVisible ) {
+			theGraphics.pushMatrix( );
+			theGraphics.translate( _myControllerStyle.marginLeft , _myControllerStyle.marginTop );
+			theGraphics.translate( theX , theY );
+
+			if ( isColorBackground ) {
+
+				float ww = getStyle( ).paddingRight + getStyle( ).paddingLeft;
+				if ( getStyle( ).backgroundWidth > -1 ) {
+					ww += _myControllerStyle.backgroundWidth;
+				} else {
+					ww += _myFontLabel.getWidth( );
+				}
+				float hh = getStyle( ).paddingBottom + getStyle( ).paddingTop;
+				if ( getStyle( ).backgroundHeight > -1 ) {
+					hh += getStyle( ).backgroundHeight;
+				} else {
+					hh += _myFontLabel.getHeight( );
+				}
+				theGraphics.fill( _myColorBackground );
+				theGraphics.rect( 0 , 1 , ww , hh );
+			}
+			theGraphics.translate( _myControllerStyle.paddingLeft , _myControllerStyle.paddingTop );
+			_myFontLabel.draw( theGraphics , this, outlineText );
 			theGraphics.popMatrix( );
 		}
 	}
@@ -417,7 +452,11 @@ public class Label implements CDrawable {
 
 		public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController );
 
+		public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController , boolean outline );
+
 		public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , int theW , int theH );
+
+		public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , int theW , int theH , boolean outline );
 
 		public int getWidth( );
 
@@ -488,8 +527,20 @@ public class Label implements CDrawable {
 			theGraphics.popMatrix( );
 		}
 
+		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , int theW , int theH , boolean outline ) {
+			_myFontLabel.adjust( theGraphics , theLabel );
+			theGraphics.pushMatrix( );
+			align( theGraphics , alignX , alignY , theW , theH );
+			theLabel.draw( theGraphics , theX , theY, outline );
+			theGraphics.popMatrix( );
+		}
+
 		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController ) {
 			draw( theLabel , theGraphics , theX , theY , theController.getWidth( ) , theController.getHeight( ) );
+		}
+
+		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController, boolean outline ) {
+			draw( theLabel , theGraphics , theX , theY , theController.getWidth( ) , theController.getHeight( ) , outline );
 		}
 
 		@Override public int getWidth( ) {
@@ -516,9 +567,17 @@ public class Label implements CDrawable {
 			theLabel.draw( theGraphics , theX , theY );
 		}
 
+		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , int theW , int theH , boolean outline ) {
+			draw( theLabel , theGraphics , theX , theY , theW , theH );
+		}
+
 		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController ) {
 			_myFontLabel.adjust( theGraphics , theLabel );
 			theLabel.draw( theGraphics , theX , theY );
+		}
+
+		@Override public void draw( Label theLabel , PGraphics theGraphics , int theX , int theY , ControllerInterface< ? > theController , boolean outline ) {
+			draw( theLabel , theGraphics , theX , theY , theController );
 		}
 
 		@Override public int getWidth( ) {

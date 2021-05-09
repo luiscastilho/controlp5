@@ -39,6 +39,7 @@ import processing.core.PGraphics;
 public class Textlabel extends Controller< Textlabel > {
 
 	protected int _myLetterSpacing = 0;
+	protected boolean outlineText = false;
 
 	private boolean disabled;
 
@@ -126,7 +127,7 @@ public class Textlabel extends Controller< Textlabel > {
 		if ( !disabled ) {
 			theGraphics.pushMatrix( );
 			theGraphics.translate( x( position ) , y( position ) );
-			_myValueLabel.draw( theGraphics , 0 , 0 , this );
+			_myValueLabel.draw( theGraphics , 0 , 0 , this, outlineText );
 			theGraphics.popMatrix( );
 		}
 	}
@@ -238,6 +239,11 @@ public class Textlabel extends Controller< Textlabel > {
 		    .severe(
 		        "The Textlabel constructor you are using has been deprecated, please use constructor\nnew Textlabel(ControlP5,String,int,int) or\nnew Textlabel(ControlP5,String,int,int,int,int) or\nnew Textlabel(ControlP5,String,int,int,int,int,int,int)\ninstead. The Textlabel with value '"
 		            + theValue + "' is disabled and will not be rendered." );
+	}
+
+	public Textlabel setOutlineText( boolean _outlineText ) {
+		outlineText = _outlineText;
+		return this;
 	}
 
 }

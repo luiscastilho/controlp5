@@ -259,6 +259,61 @@ public class ControlFont {
 		
 	}
 
+	public void draw( PGraphics theGraphics , Label theLabel, boolean outlineText ) {
+		
+		PFont loadedFont = theGraphics.textFont;
+		float loadedSize = theGraphics.textSize;
+		if ( loadedFont == null ) {
+			theGraphics.textSize( loadedSize ); // forces default font
+			loadedFont = theGraphics.textFont;
+		}
+		int loadedAlign = theGraphics.textAlign;
+
+		
+		theGraphics.textFont( pfont , size );
+		theGraphics.textAlign( theLabel.textAlign );
+		theGraphics.fill( theLabel.getColor( ) );
+		
+		if ( theLabel.isMultiline( ) ) {
+			theGraphics.fill( theLabel.getColor( ) );
+			theGraphics.textLeading( theLabel.getLineHeight( ) );
+			theGraphics.text( s , 0 , 0 , theLabel.getWidth( ) , theLabel.getHeight( ) );
+		} else {
+			
+			theGraphics.translate( 0 , -top + 1 );
+			debug( theGraphics , theLabel );
+			if ( outlineText ) {
+				theGraphics.fill( 0 );
+				theGraphics.textLeading( theLabel.getLineHeight( ) );
+				theGraphics.text( theLabel.getTextFormatted( ) , -1, 0 );
+				theGraphics.text( theLabel.getTextFormatted( ) , 0, -1 );
+				theGraphics.text( theLabel.getTextFormatted( ) , 1, 0 );
+				theGraphics.text( theLabel.getTextFormatted( ) , 0, 1 );
+			}
+			theGraphics.fill( theLabel.getColor( ) );
+			theGraphics.textLeading( theLabel.getLineHeight( ) );
+			theGraphics.text( theLabel.getTextFormatted( ) , 0 , 0 );
+			if ( RENDER_2X ) {
+				if ( outlineText ) {
+					theGraphics.fill( 0 );
+					theGraphics.textLeading( theLabel.getLineHeight( ) );
+					theGraphics.text( theLabel.getTextFormatted( ) , -1, 0 );
+					theGraphics.text( theLabel.getTextFormatted( ) , 0, -1 );
+					theGraphics.text( theLabel.getTextFormatted( ) , 1, 0 );
+					theGraphics.text( theLabel.getTextFormatted( ) , 0, 1 );
+				}
+				theGraphics.fill( theLabel.getColor( ) );
+				theGraphics.textLeading( theLabel.getLineHeight( ) );
+				theGraphics.text( theLabel.getTextFormatted( ) , 0 , 0 );
+			}
+			
+		}
+
+		theGraphics.textFont( loadedFont , loadedSize );
+		theGraphics.textAlign( loadedAlign );
+		
+	}
+
 	private void debug( PGraphics theGraphics , Label theLabel ) {
 		if ( DEBUG ) {
 
