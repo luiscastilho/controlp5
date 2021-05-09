@@ -967,4 +967,8 @@ public abstract class ControllerGroup< T > implements ControllerInterface< T > ,
 		return me;
 	}
 
+	public int size() {
+		return controllers.size();
+	}
+
 }
