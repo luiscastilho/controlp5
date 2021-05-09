@@ -145,6 +145,8 @@ public class ControlP5 extends ControlP5Base {
 	protected Tooltip _myTooltip;
 	protected boolean isAnnotation;
 	boolean isAndroid = false;
+	
+	public boolean isTouch = false;
 
 	/**
 	 * Create a new instance of controlP5.

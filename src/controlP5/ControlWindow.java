@@ -414,6 +414,8 @@ public final class ControlWindow {
 			pmouseReleased = false;
 		} else if ( !pressed && !pmouseReleased ) {
 			updateEvents( );
+			resetMouseOver( );
+			mousePressedEvent( );
 			mouseReleasedEvent( );
 			for ( ControllerInterface c : mouseoverlist ) {
 				if ( c instanceof Controller ) {
@@ -440,15 +442,35 @@ public final class ControlWindow {
 	 */
 	public void mouseEvent( MouseEvent theMouseEvent ) {
 		if ( isMouse ) {
+
+			if ( cp5.isTouch && theMouseEvent.getButton() != PApplet.LEFT )
+				return;
+
+			final int action = theMouseEvent.getAction();
+
+			if ( cp5.isTouch ) {
+ 				if ( action == MouseEvent.MOVE || action == MouseEvent.CLICK ) {
+					return;
+				}
+			}
+
 			mouseX = theMouseEvent.getX( ) - cp5.pgx - cp5.ox;
 			mouseY = theMouseEvent.getY( ) - cp5.pgy - cp5.oy;
-			if ( theMouseEvent.getAction( ) == MouseEvent.PRESS ) {
+
+			if ( cp5.isTouch ) {
+				if ( action == MouseEvent.PRESS || action == MouseEvent.RELEASE ) {
+					mouseEvent( theMouseEvent.getX( ), theMouseEvent.getY( ), action == MouseEvent.PRESS );
+					return;
+				}
+			}
+
+			if ( action == MouseEvent.PRESS ) {
 				mousePressedEvent( );
 			}
-			if ( theMouseEvent.getAction( ) == MouseEvent.RELEASE ) {
+			if ( action == MouseEvent.RELEASE ) {
 				mouseReleasedEvent( );
 			}
-			if ( theMouseEvent.getAction( ) == MouseEvent.WHEEL ) {
+			if ( action == MouseEvent.WHEEL ) {
 
 				setMouseWheelRotation( theMouseEvent.getCount( ) );
 
@@ -520,7 +542,7 @@ public final class ControlWindow {
 		if ( cp5.blockDraw == false ) {
 			if ( cp5.isAndroid ) {
 				mouseEvent( cp5.papplet.mouseX , cp5.papplet.mouseY , cp5.papplet.mousePressed );
-			} else {
+			} else if ( !cp5.isTouch ) {
 				updateEvents( );
 			}
 			if ( isVisible ) {
@@ -843,7 +865,7 @@ public final class ControlWindow {
 			_myApplet.frame.removeNotify( );
 			_myApplet.frame.setUndecorated( isUndecorated );
 			_myApplet.setSize( _myApplet.width , _myApplet.height );
-			_myApplet.setBounds( 0 , 0 , _myApplet.width , _myApplet.height );
+			//_myApplet.setBounds( 0 , 0 , _myApplet.width , _myApplet.height );
 			_myApplet.frame.setSize( _myApplet.width , _myApplet.height );
 			_myApplet.frame.addNotify( );
 		}
