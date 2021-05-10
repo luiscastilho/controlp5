@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.HashMap;
@@ -34,9 +34,9 @@ import processing.core.PGraphics;
 /**
  * A tooltip can be registered for individual controllers
  * and is activated on rollover.
- * 
+ *
  * @example controllers/ControlP5tooltip
- * 
+ *
  */
 public class Tooltip {
 
@@ -79,7 +79,7 @@ public class Tooltip {
 	/**
 	 * sets the border of the tooltip, the default border is
 	 * 4px.
-	 * 
+	 *
 	 * @param theValue
 	 * @return Tooltip
 	 */
@@ -91,7 +91,7 @@ public class Tooltip {
 
 	/**
 	 * returns the value of the border
-	 * 
+	 *
 	 * @return
 	 */
 	public int getBorder( ) {
@@ -101,7 +101,7 @@ public class Tooltip {
 	/**
 	 * sets the transparency of the default background,
 	 * default value is 200
-	 * 
+	 *
 	 * @param theValue
 	 * @return Tooltip
 	 */
@@ -140,7 +140,7 @@ public class Tooltip {
 	 * after a given delay time the Tooltip starts to fade
 	 * in. Use setDelay(long) to adjust the default delay
 	 * time of 1000 millis.
-	 * 
+	 *
 	 * @param theMillis
 	 * @return Tooltip
 	 */
@@ -152,7 +152,7 @@ public class Tooltip {
 	/**
 	 * a Tooltip is activated when the mouse enters a
 	 * controller.
-	 * 
+	 *
 	 * @param theController
 	 */
 	protected void activate( Controller< ? > theController ) {
@@ -186,7 +186,7 @@ public class Tooltip {
 	 * A custom view can be set for a Tooltip. The default
 	 * view class can be found at the bottom of the Tooltip
 	 * source.
-	 * 
+	 *
 	 * @see controlP5.ControllerView
 	 * @param theDisplay
 	 * @return Tooltip
@@ -201,7 +201,7 @@ public class Tooltip {
 	 * activating the tooltip for a particular controller,
 	 * the registered text (second parameter) will be
 	 * displayed.
-	 * 
+	 *
 	 * @param theController
 	 * @param theText
 	 * @return Tooltip
@@ -224,7 +224,7 @@ public class Tooltip {
 
 	/**
 	 * removes a controller from the tooltip
-	 * 
+	 *
 	 * @param theController
 	 * @return Tooltip
 	 */
@@ -247,7 +247,7 @@ public class Tooltip {
 	 * set automatically, therefore setWidth() does not have
 	 * any effect without changing the default display to a
 	 * custom ControllerView.
-	 * 
+	 *
 	 * @see controlP5.ControllerView
 	 * @see controlP5.Tooltip#setDisplay(ControllerView)
 	 * @return Tooltip
@@ -277,7 +277,7 @@ public class Tooltip {
 	 * adds an offset to the position of the controller
 	 * relative to the mouse cursor's position. default
 	 * offset is (10,20)
-	 * 
+	 *
 	 * @param theX
 	 * @param theY
 	 * @return Tooltip
@@ -293,7 +293,7 @@ public class Tooltip {
 	 * disabled, tooltip will not respond to any registered
 	 * controller. to disable a tooltip for aparticular
 	 * controller, used unregister(Controller)
-	 * 
+	 *
 	 * @see controlP5.Tooltip#unregister(Controller)
 	 * @return Tooltip
 	 */
@@ -305,7 +305,7 @@ public class Tooltip {
 	/**
 	 * in case the tooltip is disabled, use enable() to turn
 	 * the tooltip back on.
-	 * 
+	 *
 	 * @return Tooltip
 	 */
 	public Tooltip enable( ) {
@@ -315,7 +315,7 @@ public class Tooltip {
 
 	/**
 	 * check if the tooltip is enabled or disabled
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public boolean isEnabled( ) {
@@ -325,7 +325,7 @@ public class Tooltip {
 	/**
 	 * sets the Label to a custom label and replaces the
 	 * default label.
-	 * 
+	 *
 	 * @param theLabel
 	 * @return Tooltip
 	 */
@@ -336,7 +336,7 @@ public class Tooltip {
 
 	/**
 	 * returns the current Label
-	 * 
+	 *
 	 * @return Label
 	 */
 	public Label getLabel( ) {
@@ -346,7 +346,7 @@ public class Tooltip {
 	/**
 	 * sets the background color of the tooltip, the default
 	 * color is a dark grey
-	 * 
+	 *
 	 * @param theColor
 	 * @return Tooltip
 	 */
@@ -358,7 +358,7 @@ public class Tooltip {
 	/**
 	 * sets the text color of the tooltip's label, the
 	 * default color is a white
-	 * 
+	 *
 	 * @param theColor
 	 * @return Tooltip
 	 */

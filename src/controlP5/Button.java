@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser
  * General Public License as published by the Free Software
@@ -15,16 +15,16 @@ package controlP5;
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Lesser General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to
  * the Free Software Foundation, Inc., 59 Temple Place,
  * Suite 330, Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PGraphics;
@@ -35,7 +35,7 @@ import processing.core.PGraphics;
  * Events can be linked to functions and fields inside your
  * program/sketch. for a full documentation of this
  * controller see the {@link Controller} class.
- * 
+ *
  * @example controllers/ControlP5button
  */
 
@@ -50,7 +50,7 @@ public class Button extends Controller< Button > {
 
 	/**
 	 * Convenience constructor to extend Button.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 */
 	public Button( ControlP5 theControlP5 , String theName ) {
@@ -105,7 +105,7 @@ public class Button extends Controller< Button > {
 	/**
 	 * A button can be activated by a mouse PRESSED or mouse
 	 * RELEASE. Default value is RELEASE.
-	 * 
+	 *
 	 * @param theValue use ControlP5.PRESSED or
 	 *            ControlP5.RELEASE as parameter
 	 * @return Button
@@ -153,7 +153,7 @@ public class Button extends Controller< Button > {
 	/**
 	 * Turns a button into a switch, or use a Toggle
 	 * instead.
-	 * 
+	 *
 	 */
 	public Button setSwitch( boolean theFlag ) {
 		isSwitch = theFlag;
@@ -170,7 +170,7 @@ public class Button extends Controller< Button > {
 	 * the switch. Use
 	 * {@link controlP5.Button#setSwitch(boolean) setSwitch}
 	 * to turn a Button into a Switch.
-	 * 
+	 *
 	 * @return Button
 	 */
 	public Button setOn( ) {
@@ -187,7 +187,7 @@ public class Button extends Controller< Button > {
 	 * the switch. Use
 	 * {@link controlP5.Button#setSwitch(boolean) setSwitch}
 	 * to turn a Button into a Switch.
-	 * 
+	 *
 	 * @return Button
 	 */
 	public Button setOff( ) {
@@ -221,7 +221,7 @@ public class Button extends Controller< Button > {
 	 * Returns true or false and indicates the switch state
 	 * of the button. {@link setSwitch(boolean) setSwitch}
 	 * should have been set before.
-	 * 
+	 *
 	 * @see controlP5.Button#setSwitch(boolean)
 	 * @return boolean
 	 */

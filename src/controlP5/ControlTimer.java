@@ -27,7 +27,7 @@ package controlP5;
 
 /**
  * control timer is a timer that can be used for example as a stop watch or a duration timer.
- * 
+ *
  * @example controllers/ControlP5timer
  */
 public class ControlTimer {
@@ -49,7 +49,7 @@ public class ControlTimer {
 
 	/**
 	 * return a string representation of the current status of the timer.
-	 * 
+	 *
 	 * @return String
 	 */
 	public String toString() {
@@ -83,7 +83,7 @@ public class ControlTimer {
 
 	/**
 	 * get the time in milliseconds since the timer was started.
-	 * 
+	 *
 	 * @return long
 	 */
 	public long time() {
@@ -104,7 +104,7 @@ public class ControlTimer {
 
 	/**
 	 * set the speed of time, for slow motion or high speed.
-	 * 
+	 *
 	 * @param theSpeed int
 	 */
 	public void setSpeedOfTime(float theSpeed) {

@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.lang.reflect.InvocationTargetException;
@@ -35,7 +35,7 @@ import processing.core.PGraphics;
  * A matrix is a 2d array with a pointer that traverses through the matrix in a timed interval. if
  * an item of a matrix-column is active, the x and y position of the corresponding cell will trigger
  * an event and notify the program. see the ControlP5matrix example for more information.
- * 
+ *
  * @example controllers/ControlP5matrix
  */
 public class Matrix extends Controller< Matrix > {
@@ -64,7 +64,7 @@ public class Matrix extends Controller< Matrix > {
 
 	/**
 	 * Convenience constructor to extend Matrix.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -103,7 +103,7 @@ public class Matrix extends Controller< Matrix > {
 
 	/**
 	 * set the speed of intervals in millis iterating through the matrix.
-	 * 
+	 *
 	 * @param theInterval int
 	 * @return Matrix
 	 */
@@ -264,7 +264,7 @@ public class Matrix extends Controller< Matrix > {
 
 	/**
 	 * set the state of a particular cell inside a matrix. use true or false for parameter theValue
-	 * 
+	 *
 	 * @param theX
 	 * @param theY
 	 * @param theValue
@@ -351,7 +351,7 @@ public class Matrix extends Controller< Matrix > {
 	/**
 	 * use setMode to change the cell-activation which by default is ControlP5.SINGLE_ROW, 1 active
 	 * cell per row, but can be changed to ControlP5.SINGLE_COLUMN or ControlP5.MULTIPLES
-	 * 
+	 *
 	 * @param theMode return Matrix
 	 */
 	public Matrix setMode( int theMode ) {

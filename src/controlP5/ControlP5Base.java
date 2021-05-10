@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.lang.reflect.Method;
@@ -131,7 +131,7 @@ import static controlP5.Controller.*;
 	/**
 	 * Adds a default slider with a default width of 100 and
 	 * height of 10. the default value range is from 0-100.
-	 * 
+	 *
 	 * By default it will be added to the default tab of the
 	 * main window. Sliders can be arranged vertically and
 	 * horizontally depending on their width and height. The
@@ -488,7 +488,7 @@ import static controlP5.Controller.*;
 	/**
 	 * for internal use only. use Controller.remove()
 	 * instead.
-	 * 
+	 *
 	 * @param theObject
 	 * @return
 	 */

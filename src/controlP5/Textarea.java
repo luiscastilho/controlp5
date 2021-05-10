@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.Arrays;
@@ -36,7 +36,7 @@ import processing.core.PGraphics;
  * a textarea can be used to leave notes, it uses the controlP5 BitFont to render text. Scrollbars
  * will automatically be added when text extends the visible area. Textarea extends ControllerGroup,
  * for more methods available see the ControllerGroup documentation.
- * 
+ *
  * @example controllers/ControlP5textarea
  */
 public class Textarea extends ControllerGroup< Textarea > implements ControlListener {
@@ -52,7 +52,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * Convenience constructor to extend Textarea.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -63,7 +63,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theControlP5
 	 *            ControlP5
 	 * @param theGroup
@@ -90,7 +90,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theText
 	 *            String
 	 * @param theX
@@ -132,7 +132,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theEvent
 	 *            ControlEvent
 	 */
@@ -178,7 +178,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * scroll the Textarea remotely. values must range from 0 to 1.
-	 * 
+	 *
 	 * @param theValue
 	 */
 	public Textarea scroll( float theValue ) {
@@ -217,7 +217,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * set the width of the textarea.
-	 * 
+	 *
 	 * @param theValue
 	 *            int
 	 */
@@ -230,7 +230,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * set the height of the textarea.
-	 * 
+	 *
 	 * @param theValue
 	 *            int
 	 */
@@ -250,7 +250,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * set the lineheight of the textarea.
-	 * 
+	 *
 	 * @param theLineHeight
 	 *            int
 	 */
@@ -262,7 +262,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * set the text color of the textarea.
-	 * 
+	 *
 	 * @param theColor
 	 *            int
 	 */
@@ -273,7 +273,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * returns the instance of the textarea's label.
-	 * 
+	 *
 	 * @return
 	 */
 	public Label getValueLabel( ) {
@@ -282,7 +282,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * set the text of the textarea.
-	 * 
+	 *
 	 * @param theText
 	 *            String
 	 */
@@ -314,7 +314,7 @@ public class Textarea extends ControllerGroup< Textarea > implements ControlList
 
 	/**
 	 * returns the text content of the textarea.
-	 * 
+	 *
 	 * @return String
 	 */
 	public String getText( ) {

@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PGraphics;
@@ -32,7 +32,7 @@ import processing.core.PGraphics;
  * The Bang controller triggers an event when pressed. A bang can only be assigned to a function in
  * your program but not to a field like other controllers. Bang extends superclass Controller, for a
  * full documentation see the {@link Controller} reference.
- * 
+ *
  * @example controllers/ControlP5bang
  */
 @ControlP5.Layout public class Bang extends Controller< Bang > {
@@ -43,7 +43,7 @@ import processing.core.PGraphics;
 
 	/**
 	 * Convenience constructor to extend Bang.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -92,7 +92,7 @@ import processing.core.PGraphics;
 	 * By default a bang is triggered when the mouse is pressed. use setTriggerEvent(Bang.PRESSED)
 	 * or setTriggerEvent(Bang.RELEASE) to define the action for triggering a bang. currently only
 	 * Bang.PRESSED and Bang.RELEASE are supported.
-	 * 
+	 *
 	 * @param theEventID
 	 * @return Bang
 	 */
@@ -107,7 +107,7 @@ import processing.core.PGraphics;
 
 	/**
 	 * Sets the value of the bang controller. since bang can be true or false, false=0 and true=1
-	 * 
+	 *
 	 * @param theValue float
 	 * @return Bang
 	 */
@@ -188,7 +188,7 @@ import processing.core.PGraphics;
 
 	/**
 	 * {@inheritDoc}
-	 * 
+	 *
 	 * @exclude
 	 */
 	@Override public String getInfo( ) {

@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PGraphics;
@@ -30,7 +30,7 @@ import processing.core.PImage;
 
 /**
  * a toggle can have two states, true and false, where true has the value 1 and false is 0.
- * 
+ *
  * @example controllers/ControlP5toggle
  * @nosuperclasses Controller Controller
  */
@@ -45,7 +45,7 @@ public class Toggle extends Controller< Toggle > {
 
 	/**
 	 * Convenience constructor to extend Toggle.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -62,7 +62,7 @@ public class Toggle extends Controller< Toggle > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theApplet PApplet
 	 */
 	@ControlP5.Invisible public void draw( PGraphics theGraphics ) {
@@ -121,7 +121,7 @@ public class Toggle extends Controller< Toggle > {
 
 	/**
 	 * sets the state of the toggle, this can be true or false.
-	 * 
+	 *
 	 * @param theFlag boolean
 	 */
 	public Toggle setState( boolean theFlag ) {
@@ -159,7 +159,7 @@ public class Toggle extends Controller< Toggle > {
 
 	/**
 	 * set the visual mode of a Toggle. use setMode(ControlP5.DEFAULT) or setMode(ControlP5.SWITCH)
-	 * 
+	 *
 	 * @param theMode
 	 */
 	public Toggle setMode( int theMode ) {
@@ -174,7 +174,7 @@ public class Toggle extends Controller< Toggle > {
 	/**
 	 * by default a toggle returns 0 (for off) and 1 (for on). the internal value variable can be
 	 * used to store an additional value for a toggle event.
-	 * 
+	 *
 	 * @param theInternalValue
 	 */
 	@ControlP5.Invisible public void setInternalValue( float theInternalValue ) {

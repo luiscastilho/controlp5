@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import java.util.List;
 
 /**
  * Used by MultiList.
- * 
+ *
  * @example controllers/ControlP5multiList
  * @nosuperclasses Controller Controller
  */
@@ -45,7 +45,7 @@ public class MultiListButton extends Button implements MultiListInterface {
 	private boolean isUpperCase = true;
 
 	/**
-	 * 
+	 *
 	 * @param theProperties ControllerProperties
 	 * @param theParent MultiListInterface
 	 * @param theRoot MultiList
@@ -111,7 +111,7 @@ public class MultiListButton extends Button implements MultiListInterface {
 
 	/**
 	 * set the width of a multlist button.
-	 * 
+	 *
 	 * @param theWidth int
 	 */
 	public MultiListButton setWidth( int theWidth ) {
@@ -124,7 +124,7 @@ public class MultiListButton extends Button implements MultiListInterface {
 
 	/**
 	 * set the height of a multlist button.
-	 * 
+	 *
 	 * @param theHeight int
 	 */
 	public MultiListButton setHeight( int theHeight ) {
@@ -146,7 +146,7 @@ public class MultiListButton extends Button implements MultiListInterface {
 
 	/**
 	 * add a new button to the sublist of this multilist button.
-	 * 
+	 *
 	 * @param theName String
 	 * @param theValue int
 	 * @return MultiListButton

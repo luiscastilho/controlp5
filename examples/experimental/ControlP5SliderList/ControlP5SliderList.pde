@@ -1,12 +1,12 @@
 
 /**
  * ControlP5 SilderList
- * 
+ *
  * A custom Controller, a scrollable Menu List, using a PGraphics buffer.
  * Allows custom designs for List Item.
- * 
+ *
  * you will need a controlP5 version >= 2.1.5
- * you can download a copy from 
+ * you can download a copy from
  * http://sojamo.de/files/archive/controlP5-2.1.5.zip
  *
  * by Andreas Schlegel, 2013
@@ -32,7 +32,7 @@ void setup() {
   cp5 = new ControlP5( this );
 
 
-  // create a custom SilderList with name menu, notice that function 
+  // create a custom SilderList with name menu, notice that function
   // menu will be called when a menu item has been clicked.
 
   SilderList m = new SilderList( cp5, "menu", 250, 350 );
@@ -44,7 +44,7 @@ void setup() {
   }
 }
 
-// a convenience function to build a map that contains our key-value  
+// a convenience function to build a map that contains our key-value
 // pairs which we will then use to render each item of the SilderList.
 //
 Map<String, Object> makeItem(String theLabel, float theValue, float theMin, float theMax) {
@@ -86,13 +86,13 @@ void draw() {
 }
 
 
-// A custom Controller that implements a scrollable SilderList.  
-// Here the controller uses a PGraphics element to render customizable 
-// list items. The SilderList can be scrolled using the scroll-wheel,  
-// touchpad, or mouse-drag. Slider are triggered by a press or drag.  
-// clicking the scrollbar to the right makes the list scroll to the item  
-// correspoinding to the click-location.  
- 
+// A custom Controller that implements a scrollable SilderList.
+// Here the controller uses a PGraphics element to render customizable
+// list items. The SilderList can be scrolled using the scroll-wheel,
+// touchpad, or mouse-drag. Slider are triggered by a press or drag.
+// clicking the scrollbar to the right makes the list scroll to the item
+// correspoinding to the click-location.
+
 class SilderList extends Controller<SilderList> {
 
   float pos, npos;
@@ -164,7 +164,7 @@ class SilderList extends Controller<SilderList> {
       menu.rect(0, itemHeight-1, getWidth(), 1 );
       menu.fill(150);
       // uncomment the following line to use a different font than the default controlP5 font
-      //menu.textFont(f1); 
+      //menu.textFont(f1);
       String txt = String.format("%s   %.2f", m.get("label").toString().toUpperCase(), f(items.get(i).get("sliderValue")));
       menu.text(txt, 10, 20 );
       menu.fill(255);
@@ -182,8 +182,8 @@ class SilderList extends Controller<SilderList> {
     updateMenu = abs(npos-pos)>0.01 ? true:false;
   }
 
-  // when detecting a click, check if the click happend to the far right,  
-  // if yes, scroll to that position, otherwise do whatever this item of 
+  // when detecting a click, check if the click happend to the far right,
+  // if yes, scroll to that position, otherwise do whatever this item of
   // the list is supposed to do.
   public void onClick() {
     if (getPointer().x()>getWidth()-10) {
@@ -196,7 +196,7 @@ class SilderList extends Controller<SilderList> {
   public void onPress() {
     int x = getPointer().x();
     int y = (int)(getPointer().y()-pos)%itemHeight;
-    boolean withinSlider = within(x, y, sliderX, sliderY, sliderWidth, sliderHeight); 
+    boolean withinSlider = within(x, y, sliderX, sliderY, sliderWidth, sliderHeight);
     dragMode =  withinSlider ? 2:1;
     if (dragMode==2) {
       dragIndex = getIndex();
@@ -224,7 +224,7 @@ class SilderList extends Controller<SilderList> {
       updateMenu = true;
       break;
     }
-  } 
+  }
 
   public void onScroll(int n) {
     npos += ( n * 4 );

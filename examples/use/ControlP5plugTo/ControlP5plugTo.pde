@@ -3,7 +3,7 @@
 *
 * This example demonstrate how to use the plugTo method to
 * connect a controller to a field or method of a particular object.
-* 
+*
 *
 * find a list of public methods available for the ControlP5 Controller
 * at the bottom of this sketch.
@@ -34,17 +34,17 @@ void setup() {
   for(int i=0;i<10;i++) {
     testarray[i] = new Test(200 + i*20);
   }
-  
+
   controlP5 = new ControlP5(this);
-  
+
   controlP5.begin(100,20);
-  
+
   b = controlP5.addButton("trigger",1);
   b.setColorBackground(ControlP5.RED);
-  
+
   controlP5.addButton("plug",2);
   controlP5.addButton("unplug",3);
-  
+
   // b is a button previously added to controlP5 with name 'trigger'
   // controlP5 no tries to find a field or method inside object test
   // in order to connect controller 'trigger' with test.trigger()
@@ -52,7 +52,7 @@ void setup() {
   controlP5.end();
 }
 
-// connects controller 'trigger' with objects of type Test contained 
+// connects controller 'trigger' with objects of type Test contained
 // inside arrat testarray
 void plug(int theValue) {
    b.plugTo(testarray);
@@ -60,7 +60,7 @@ void plug(int theValue) {
    println("plugging controller b1 to array 'testarray' and variable 'test'.");
 }
 
-// disconnects controller 'trigger' from objects of type Test stored 
+// disconnects controller 'trigger' from objects of type Test stored
 // inside array testarray
 void unplug(int theValue) {
   b.unplugFrom(testarray);
@@ -84,18 +84,18 @@ void draw() {
 
 
 class Test {
-  float n0 = 0; 
-  float n1 = 1; 
+  float n0 = 0;
+  float n1 = 1;
   float x;
-  
+
   Test(float theX) {
     x = theX;
-  } 
-  
+  }
+
   void trigger(int theValue) {
     n1 = random(100);
   }
-  
+
   void display() {
     n0 += (n1-n0) * 0.1;
     rect(x,200,10,n0);

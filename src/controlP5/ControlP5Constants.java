@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PApplet;
@@ -159,7 +159,7 @@ public interface ControlP5Constants {
 	static public final int GRAY = 0xFFAAAAAA;
 	static public final int BLACK = 0xFF111111;
 
-	
+
 	/*fg, bg, active, caption, value ) */
 	public final static CColor THEME_RETRO = new CColor( 0xff00698c , 0xff003652 , 0xff08a2cf , 0xffffffff , 0xffffffff );
 	public final static CColor THEME_CP52014 = new CColor( 0xff0074D9 , 0xff002D5A, 0xff00aaff , 0xffffffff , 0xffffffff );
@@ -168,8 +168,8 @@ public interface ControlP5Constants {
 	public final static CColor THEME_GREY = new CColor( 0xffeeeeee, 0xffbbbbbb , 0xffffffff , 0xff555555 , 0xff555555 );
 	public final static CColor THEME_A = new CColor( 0xff00FFC8 , 0xff00D7FF , 0xffffff00 , 0xff00B0FF , 0xff00B0FF );
 
-	// other colors: #ff3838 red-salmon; #08ffb4 turquoise; #40afff light-blue; #f3eddb beige; 
-	
+	// other colors: #ff3838 red-salmon; #08ffb4 turquoise; #40afff light-blue; #f3eddb beige;
+
 	public static final int standard58 = 0;
 	public static final int standard56 = 1;
 	public static final int synt24 = 2;
@@ -180,8 +180,8 @@ public interface ControlP5Constants {
 
 	public final static String JSON = "JSON";
 	public final static String SERIALIZED = "SERIALIZED";
-	
+
 	static public final String delimiter = " ";
 	static public final String pathdelimiter = "/";
-	
+
 }

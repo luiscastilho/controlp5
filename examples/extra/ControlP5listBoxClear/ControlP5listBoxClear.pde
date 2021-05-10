@@ -10,8 +10,8 @@ void setup() {
   l = controlP5.addListBox("myList",100,100,120,150);
   // l.actAsPulldownMenu(true);
   l.setItemHeight(23);
-  
-  
+
+
   s[0] = new String[] {
     "a","b","c","d"
   };
@@ -21,7 +21,7 @@ void setup() {
   s[2] = new String[] {
     "l","m","n"
   };
-  
+
   for(int i=0;i<s[1].length;i++) {
     l.addItem(s[1][i],i);
   }
@@ -41,8 +41,8 @@ void keyPressed() {
     for(int i=0;i<s[0].length;i++) {
       // using bit shifting to store 2 values in 1 int
       int n = 0;
-      n = n | 1 << 8;  
-      n = n | i << 0; 
+      n = n | 1 << 8;
+      n = n | i << 0;
       l.addItem("1-"+s[0][i],n);
     }
     break;
@@ -52,8 +52,8 @@ void keyPressed() {
     for(int i=0;i<s[1].length;i++) {
       // useing bit shifting to store 2 values in 1 int
       int n = 0;
-      n = n | 2 << 8;  
-      n = n | i << 0; 
+      n = n | 2 << 8;
+      n = n | i << 0;
       l.addItem("2-"+s[1][i],n);
     }
     break;

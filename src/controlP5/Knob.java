@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PApplet;
@@ -31,7 +31,7 @@ import processing.core.PGraphics;
 /**
  * A knob is a circular slider which can be used with a limited and unlimited range. Knobs come in 3
  * designs LINE, ARC and ELLIPSE and can be controller with both the mouse and the mouse wheel.
- * 
+ *
  * @example controllers/ControlP5knob
  */
 public class Knob extends Controller< Knob > {
@@ -62,7 +62,7 @@ public class Knob extends Controller< Knob > {
 
 	/**
 	 * Convenience constructor to extend Knob.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -153,7 +153,7 @@ public class Knob extends Controller< Knob > {
 	/**
 	 * Sets the drag direction, when controlling a knob, parameter is either Controller.HORIZONTAL
 	 * or Controller.VERTICAL.
-	 * 
+	 *
 	 * @param theValue
 	 *            must be Controller.HORIZONTAL or Controller.VERTICAL
 	 * @return Knob
@@ -169,7 +169,7 @@ public class Knob extends Controller< Knob > {
 
 	/**
 	 * Gets the drag direction which is either Controller.HORIZONTAL or Controller.VERTICAL.
-	 * 
+	 *
 	 * @return int returns Controller.HORIZONTAL or Controller.VERTICAL
 	 */
 	public int getDragDirection( ) {
@@ -371,7 +371,7 @@ public class Knob extends Controller< Knob > {
 	 * Sets the sensitivity for the scroll behavior when using the mouse wheel or the scroll
 	 * function of a multi-touch track pad. The smaller the value (closer to 0) the higher the
 	 * sensitivity.
-	 * 
+	 *
 	 * @param theValue
 	 * @return Knob
 	 */
@@ -403,7 +403,7 @@ public class Knob extends Controller< Knob > {
 	/**
 	 * set the display style of a knob. takes parameters Knob.LINE, Knob.ELLIPSE or Knob.ARC.
 	 * default style is Knob.LINE
-	 * 
+	 *
 	 * @param theStyle
 	 *            use Knob.LINE, Knob.ELLIPSE or Knob.ARC
 	 * @return Knob
@@ -555,18 +555,18 @@ public class Knob extends Controller< Knob > {
 
 }
 /* settings for:
- * 
+ *
  * TODO tickmarks: distance from edge
- * 
+ *
  * TODO only start-end marks if isLimited and tickmarks are off.
- * 
+ *
  * TODO arc: add setter for distance to center + distance to edge currently percental.
- * 
+ *
  * TODO enable/disable drag and click control (for endless, click should be disabled).
- * 
+ *
  * TODO dragging: add another option to control the knob. currently only linear dragging is
  * implemented, add circular dragging (as before) as well */
 
 /* (non-Javadoc)
- * 
+ *
  * @see controlP5.Controller#updateInternalEvents(processing.core.PApplet) */

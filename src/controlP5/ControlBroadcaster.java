@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.lang.reflect.Field;
@@ -41,7 +41,7 @@ import java.util.Set;
  * its listeners. The ControlBroadcaster is primarily for internal use only but can be accessed
  * through an instance of the ControlP5 class. Instead of accessing the ControlBroadcaster directly,
  * use the convenience methods available from the ControlP5 class.
- * 
+ *
  * @see controlP5.ControlP5#getControlBroadcaster()
  */
 public class ControlBroadcaster {
@@ -87,7 +87,7 @@ public class ControlBroadcaster {
 
 	/**
 	 * Returns a ControlListener by index
-	 * 
+	 *
 	 * @param theIndex
 	 * @return
 	 */
@@ -100,7 +100,7 @@ public class ControlBroadcaster {
 
 	/**
 	 * Returns the size of the ControlListener list
-	 * 
+	 *
 	 * @return
 	 */
 	public int listenerSize( ) {
@@ -121,7 +121,7 @@ public class ControlBroadcaster {
 
 	/**
 	 * Adds a CallbackListener for a list of controllers.
-	 * 
+	 *
 	 * @param theListener
 	 * @param theController
 	 */
@@ -145,7 +145,7 @@ public class ControlBroadcaster {
 
 	/**
 	 * Removes a CallbackListener for a particular controller
-	 * 
+	 *
 	 * @param theController
 	 */
 	public ControlBroadcaster removeCallback( Controller< ? > ... theControllers ) {

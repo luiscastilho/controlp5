@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,29 +13,29 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 /**
  * <p>
- * An Accordion here is a list of ControlGroups which can be expanded and collapsed. 
- * 
+ * An Accordion here is a list of ControlGroups which can be expanded and collapsed.
+ *
  * @see controlP5.ControllerGroup
  * @see controlP5.ControlGroup
  * @example controllers/ControlP5accordion
  */
 @SuppressWarnings( "rawtypes" ) public class Accordion extends ControlGroup< Accordion > {
 
-	
+
 	protected int spacing = 1;
 	protected int minHeight = 100;
 	protected int itemheight;
@@ -53,7 +53,7 @@ package controlP5;
 
 	/**
 	 * Adds items of type ControlGroup to the Accordion, only ControlGroups can be added.
-	 * 
+	 *
 	 * @exclude
 	 * @param theGroup
 	 * @return Accordion
@@ -76,7 +76,7 @@ package controlP5;
 	 * Removes a ControlGroup from the accordion AND from controlP5 remove(ControllerInterface
 	 * theGroup) overwrites it's super method. if you want to remove a ControlGroup only from the
 	 * accordion, use removeItem(ControlGroup).
-	 * 
+	 *
 	 * @see controlP5.Accordion#removeItem(ControlGroup)
 	 * @return ControllerInterface
 	 */
@@ -94,7 +94,7 @@ package controlP5;
 	 * Removes a ControlGroup from the accordion and puts it back into the default tab of controlP5.
 	 * if you dont have access to a ControlGroup via a variable, use
 	 * controlP5.group("theNameOfTheGroup") which will return a
-	 * 
+	 *
 	 * @return Accordion
 	 */
 	public Accordion removeItem( ControlGroup< ? > theGroup ) {
@@ -112,7 +112,7 @@ package controlP5;
 	 * UpdateItems is called when changes such as remove, change of height is performed on an
 	 * accordion. updateItems() is called automatically for such cases, but by calling updateItems
 	 * manually an update will be forced.
-	 * 
+	 *
 	 * @return Accordion
 	 */
 	public Accordion updateItems( ) {
@@ -133,7 +133,7 @@ package controlP5;
 
 	/**
 	 * Sets the minimum height of a collapsed item, default value is 100.
-	 * 
+	 *
 	 * @param theHeight
 	 * @return Accordion
 	 */

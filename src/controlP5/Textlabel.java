@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.Arrays;
@@ -44,7 +44,7 @@ public class Textlabel extends Controller< Textlabel > {
 	private boolean disabled;
 
 	/**
-	 * 
+	 *
 	 * @param theControlP5 ControlP5
 	 * @param theParent Tab
 	 * @param theName String
@@ -59,7 +59,7 @@ public class Textlabel extends Controller< Textlabel > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theValue String
 	 * @param theX int
 	 * @param theY int
@@ -159,7 +159,7 @@ public class Textlabel extends Controller< Textlabel > {
 	public int getLineHeight( ) {
 		return _myValueLabel.getLineHeight( );
 	}
-	
+
 	public ControllerStyle getStyle() {
 		return _myValueLabel.getStyle( );
 	}
@@ -186,7 +186,7 @@ public class Textlabel extends Controller< Textlabel > {
 
 	/**
 	 * set the text of the textlabel.
-	 * 
+	 *
 	 * @param theText String
 	 */
 	public Textlabel setValue( final String theText ) {
@@ -204,7 +204,7 @@ public class Textlabel extends Controller< Textlabel > {
 
 	/**
 	 * set the letter spacing of the font.
-	 * 
+	 *
 	 * @param theValue int
 	 * @return Textlabel
 	 */

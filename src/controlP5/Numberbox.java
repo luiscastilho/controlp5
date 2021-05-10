@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PApplet;
@@ -32,16 +32,16 @@ import processing.core.PGraphics;
  * Click and drag the mouse inside a numberbox and move up and down to change the value of a
  * numberbox. By default the value changes when dragging the mouse up and down. use
  * setDirection(Controller.HORIZONTAL) to change the mouse control to left and right.
- * 
+ *
  * Why do I get -1000000 as initial value when creating a numberbox without a default value? the
  * value of a numberbox defaults back to its minValue, which is -1000000. either use a default value
  * or link a variable to the numberbox - this is done by giving a float or int variable the same
  * name as the numberbox.
- * 
+ *
  * Use setMultiplier(float) to change the sensitivity of values increasing/decreasing, by default
  * the multiplier is 1.
- * 
- * 
+ *
+ *
  * @example controllers/ControlP5numberbox
  * @nosuperclasses Controller Controller
  */
@@ -62,7 +62,7 @@ public class Numberbox extends Controller< Numberbox > {
 
 	/**
 	 * Convenience constructor to extend Numberbox.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -73,7 +73,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theControlP5 ControlP5
 	 * @param theParent Tab
 	 * @param theName String
@@ -95,7 +95,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/* (non-Javadoc)
-	 * 
+	 *
 	 * @see ControllerInterfalce.updateInternalEvents */
 	@ControlP5.Invisible
 	public Numberbox updateInternalEvents( PApplet theApplet ) {
@@ -112,7 +112,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/* (non-Javadoc)
-	 * 
+	 *
 	 * @see controlP5.Controller#mousePressed() */
 	@Override
 	@ControlP5.Invisible
@@ -121,7 +121,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/* (non-Javadoc)
-	 * 
+	 *
 	 * @see controlP5.Controller#mouseReleased() */
 	@Override
 	@ControlP5.Invisible
@@ -130,7 +130,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/* (non-Javadoc)
-	 * 
+	 *
 	 * @see controlP5.Controller#mouseReleasedOutside() */
 	@Override
 	@ControlP5.Invisible
@@ -139,7 +139,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theMultiplier
 	 * @return Numberbox
 	 */
@@ -149,7 +149,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return float
 	 */
 	public float getMultiplier( ) {
@@ -158,7 +158,7 @@ public class Numberbox extends Controller< Numberbox > {
 
 	/**
 	 * set the value of the numberbox.
-	 * 
+	 *
 	 * @param theValue float
 	 * @return Numberbox
 	 */
@@ -173,7 +173,7 @@ public class Numberbox extends Controller< Numberbox > {
 
 	/**
 	 * assigns a random value to the controller.
-	 * 
+	 *
 	 * @return Numberbox
 	 */
 	public Numberbox shuffle( ) {
@@ -195,7 +195,7 @@ public class Numberbox extends Controller< Numberbox > {
 	 * sets the sensitivity for the scroll behavior when using the mouse wheel or the scroll
 	 * function of a multi-touch track pad. The smaller the value (closer to 0) the higher the
 	 * sensitivity.
-	 * 
+	 *
 	 * @param theValue
 	 * @return Numberbox
 	 */
@@ -207,7 +207,7 @@ public class Numberbox extends Controller< Numberbox > {
 	/**
 	 * changes the value of the numberbox when hovering and using the mouse wheel or the scroll
 	 * function of a multi-touch track pad.
-	 * 
+	 *
 	 * @param theRotationValue
 	 * @return Numberbox
 	 */
@@ -223,7 +223,7 @@ public class Numberbox extends Controller< Numberbox > {
 	 * set the direction for changing the numberbox value when dragging the mouse. by default this
 	 * is up/down (VERTICAL), use setDirection(Controller.HORIZONTAL) to change to left/right or
 	 * back with setDirection(Controller.VERTICAL).
-	 * 
+	 *
 	 * @param theValue
 	 */
 	public Numberbox setDirection( int theValue ) {
@@ -236,7 +236,7 @@ public class Numberbox extends Controller< Numberbox > {
 	}
 
 	/* (non-Javadoc)
-	 * 
+	 *
 	 * @see controlP5.Controller#update() */
 	@Override
 	public Numberbox update( ) {
@@ -291,7 +291,7 @@ public class Numberbox extends Controller< Numberbox > {
 
 	/**
 	 * @see controlP5.Numberbox#setScrollSensitivity(float)
-	 * 
+	 *
 	 * @param theValue
 	 * @return
 	 */

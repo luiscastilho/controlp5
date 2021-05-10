@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ import processing.core.PGraphics;
  * dimensions of a font which are not available at all times but only at certain times. The current
  * status I suppose is a good compromise and works for standard font handling cases. For any special
  * cases it will be difficult to convince me to make any changes.)
- * 
+ *
  * @example extra/ControlP5controlFont
  */
 public class ControlFont {
@@ -223,7 +223,7 @@ public class ControlFont {
 	}
 
 	public void draw( PGraphics theGraphics , Label theLabel ) {
-		
+
 		PFont loadedFont = theGraphics.textFont;
 		float loadedSize = theGraphics.textSize;
 		if ( loadedFont == null ) {
@@ -232,17 +232,17 @@ public class ControlFont {
 		}
 		int loadedAlign = theGraphics.textAlign;
 
-		
+
 		theGraphics.textFont( pfont , size );
 		theGraphics.textAlign( theLabel.textAlign );
 		theGraphics.fill( theLabel.getColor( ) );
-		
+
 		if ( theLabel.isMultiline( ) ) {
 			theGraphics.fill( theLabel.getColor( ) );
 			theGraphics.textLeading( theLabel.getLineHeight( ) );
 			theGraphics.text( s , 0 , 0 , theLabel.getWidth( ) , theLabel.getHeight( ) );
 		} else {
-			
+
 			theGraphics.translate( 0 , -top + 1 );
 			debug( theGraphics , theLabel );
 			theGraphics.fill( theLabel.getColor( ) );
@@ -251,16 +251,16 @@ public class ControlFont {
 			if ( RENDER_2X ) {
 				theGraphics.text( theLabel.getTextFormatted( ) , 0 , 0 );
 			}
-			
+
 		}
 
 		theGraphics.textFont( loadedFont , loadedSize );
 		theGraphics.textAlign( loadedAlign );
-		
+
 	}
 
 	public void draw( PGraphics theGraphics , Label theLabel, boolean outlineText ) {
-		
+
 		PFont loadedFont = theGraphics.textFont;
 		float loadedSize = theGraphics.textSize;
 		if ( loadedFont == null ) {
@@ -269,17 +269,17 @@ public class ControlFont {
 		}
 		int loadedAlign = theGraphics.textAlign;
 
-		
+
 		theGraphics.textFont( pfont , size );
 		theGraphics.textAlign( theLabel.textAlign );
 		theGraphics.fill( theLabel.getColor( ) );
-		
+
 		if ( theLabel.isMultiline( ) ) {
 			theGraphics.fill( theLabel.getColor( ) );
 			theGraphics.textLeading( theLabel.getLineHeight( ) );
 			theGraphics.text( s , 0 , 0 , theLabel.getWidth( ) , theLabel.getHeight( ) );
 		} else {
-			
+
 			theGraphics.translate( 0 , -top + 1 );
 			debug( theGraphics , theLabel );
 			if ( outlineText ) {
@@ -306,12 +306,12 @@ public class ControlFont {
 				theGraphics.textLeading( theLabel.getLineHeight( ) );
 				theGraphics.text( theLabel.getTextFormatted( ) , 0 , 0 );
 			}
-			
+
 		}
 
 		theGraphics.textFont( loadedFont , loadedSize );
 		theGraphics.textAlign( loadedAlign );
-		
+
 	}
 
 	private void debug( PGraphics theGraphics , Label theLabel ) {

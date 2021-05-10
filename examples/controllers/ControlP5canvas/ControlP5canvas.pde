@@ -1,14 +1,14 @@
 /**
  * ControlP5 Canvas
- * The ControlWindowCanvas allow you to add custom graphics to 
+ * The ControlWindowCanvas allow you to add custom graphics to
  * the default controlP5 renderer or a controlWindow rednerer.
  *
- * find a list of public methods available for the Canvas Controller 
+ * find a list of public methods available for the Canvas Controller
  * at the bottom of this sketch's source code
  *
  * by Andreas Schlegel, 2011
  * www.sojamo.de/libraries/controlp5
- * 
+ *
  */
 
 
@@ -28,7 +28,7 @@ class MyCanvas extends Canvas {
   int my = 0;
   public void setup(PGraphics pg) {
     y = 200;
-  }  
+  }
 
   public void update(PApplet p) {
     mx = p.mouseX;
@@ -52,7 +52,7 @@ void setup() {
   cp5 = new ControlP5(this);
 
   // create a control window canvas and add it to
-  // the previously created control window.  
+  // the previously created control window.
   cc = new MyCanvas();
   cc.pre(); // use cc.post(); to draw on top of existing controllers.
   cp5.addCanvas(cc); // add the canvas to cp5
@@ -76,11 +76,11 @@ Format:
 ClassName : returnType methodName(parameter type)
 
 
-controlP5.Canvas : void moveTo(ControlWindow) 
-controlP5.Canvas : void setup(PGraphics) 
-controlP5.Canvas : void update(PApplet) 
-java.lang.Object : String toString() 
-java.lang.Object : boolean equals(Object) 
+controlP5.Canvas : void moveTo(ControlWindow)
+controlP5.Canvas : void setup(PGraphics)
+controlP5.Canvas : void update(PApplet)
+java.lang.Object : String toString()
+java.lang.Object : boolean equals(Object)
 
 created: 2015/03/24 12:20:53
 

@@ -30,7 +30,7 @@ package controlP5;
  * Events can also be sent when a tab is activated, but by default tab events are disabled and have
  * to be enabled with {@link Tab} Tab.activateEvent(). for detailed information see the tab
  * documentation.
- * 
+ *
  * @example use/ControlP5controlEvent
  */
 public class ControlEvent {
@@ -54,7 +54,7 @@ public class ControlEvent {
 	protected int myAction;
 
 	/**
-	 * 
+	 *
 	 * @param theController
 	 *            Controller
 	 */
@@ -99,7 +99,7 @@ public class ControlEvent {
 
 	/**
 	 * Returns a float array, applies to e.g. Range.
-	 * 
+	 *
 	 * @return float[]
 	 */
 	public float[] getArrayValue( ) {
@@ -110,7 +110,7 @@ public class ControlEvent {
 	 * Returns a float value at a particular index from a controller's array value. No error
 	 * checking available here, will throw ArrayIndexOutOfBOundsException in case of unavailable
 	 * index.
-	 * 
+	 *
 	 * @param theIndex
 	 * @return
 	 */
@@ -120,7 +120,7 @@ public class ControlEvent {
 
 	/**
 	 * Returns the instance of the controller sending the ControlEvent.
-	 * 
+	 *
 	 * @return Controller
 	 */
 	public Controller< ? > getController( ) {
@@ -129,7 +129,7 @@ public class ControlEvent {
 
 	/**
 	 * Returns the tab that triggered the ControlEvent
-	 * 
+	 *
 	 * @return Tab Tab
 	 */
 	public Tab getTab( ) {
@@ -138,7 +138,7 @@ public class ControlEvent {
 
 	/**
 	 * Returns the group that evoked the ControlEvent
-	 * 
+	 *
 	 * @return ControlGroup
 	 */
 	public ControlGroup< ? > getGroup( ) {
@@ -147,7 +147,7 @@ public class ControlEvent {
 
 	/**
 	 * Gets the text of the controller's label that has evoked the event.
-	 * 
+	 *
 	 * @return String
 	 */
 	public String getLabel( ) {
@@ -156,7 +156,7 @@ public class ControlEvent {
 
 	/**
 	 * Checks if the ControlEvent was triggered by a tab
-	 * 
+	 *
 	 * @see controlP5.Tab
 	 * @return boolean
 	 */
@@ -166,7 +166,7 @@ public class ControlEvent {
 
 	/**
 	 * Checks if the ControlEvent was triggered by a controller
-	 * 
+	 *
 	 * @see controlP5.Controller
 	 * @return boolean
 	 */
@@ -176,7 +176,7 @@ public class ControlEvent {
 
 	/**
 	 * Checks if the ControlEvent was triggered by a ControlGroup
-	 * 
+	 *
 	 * @see controlP5.ControllerGroup
 	 * @return boolean
 	 */
@@ -186,7 +186,7 @@ public class ControlEvent {
 
 	/**
 	 * returns the controller's name
-	 * 
+	 *
 	 * @return String
 	 */
 	public String getName( ) {
@@ -196,7 +196,7 @@ public class ControlEvent {
 	/**
 	 * Returns the controller's id, if an id has not been set before the default value -1 will be
 	 * returned.
-	 * 
+	 *
 	 * @return
 	 */
 	public int getId( ) {
@@ -219,7 +219,7 @@ public class ControlEvent {
 
 	/**
 	 * Checks if the ControlEvent originates from a specific Controller or ControllerGroup.
-	 * 
+	 *
 	 * @param theController
 	 * @return boolean
 	 */
@@ -230,7 +230,7 @@ public class ControlEvent {
 	/**
 	 * checks if the ControlEvent originates from a specific Controller or ControllerGroup
 	 * identifiable by name.
-	 * 
+	 *
 	 * @param theController
 	 * @return boolean
 	 */

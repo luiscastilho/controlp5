@@ -1,10 +1,10 @@
 # ControlP5
 
-ControlP5 is a GUI library written by [Andreas Schlegel](http://www.sojamo.de) for the programming environment [Processing](http://www.processing.org). 
+ControlP5 is a GUI library written by [Andreas Schlegel](http://www.sojamo.de) for the programming environment [Processing](http://www.processing.org).
 
 The range of available controllers includes Slider, Button, Toggle, Knob, Textfield, RadioButton, Checkbox, Lists amongst others. These controllers can be easily added to a processing sketch, or displayed inside a separate control window. They can be organized in tabs or groups as well as rendered into PGraphics buffers. The state of a controller can be saved to file in JSON format.
 
-## Contents 
+## Contents
 
   * [Installation](#install)
   * [How does ControlP5 work](#how)
@@ -12,7 +12,7 @@ The range of available controllers includes Slider, Button, Toggle, Knob, Textfi
     * [Controllers](#controllers)
     * [Event Handling](#events)
     * [Customizing Controllers](#customize)
-  * [Deprecated](#deprecated)    
+  * [Deprecated](#deprecated)
   * [History](#history)
   * [Android](#android)
   * [Javascript](#javascript)
@@ -20,8 +20,8 @@ The range of available controllers includes Slider, Button, Toggle, Knob, Textfi
   * [Help](#help)
   * [Digital Object Identifiers ](#doi)
 
-  
-## <a name"install"></a>Installation
+
+## <a name="install"></a>Installation
 
 To install the library from inside the Processing IDE, use the Library Manager from the menu under Sketch &rarr; Import Library &rarr; Add Library and search for ControlP5.
 
@@ -48,7 +48,7 @@ _example 1, see code below_
 	int v1;
 
 	void setup() {
-	  size(800, 400);  
+	  size(800, 400);
 	  noStroke();
 	  cp5 = new ControlP5(this);
 	  cp5.addSlider("v1")
@@ -93,7 +93,7 @@ _example 1, see code below_
 _example 2, a range of default ControlP5 controllers_
 
 
-## <a name"how"></a>How does ControlP5 work?
+## <a name="how"></a>How does ControlP5 work?
 
 
 ControlP5 provides a range of controllers, each controller comes with an example which is located inside the examples/controllers folder. This is a good place to get started with ControlP5.
@@ -176,7 +176,7 @@ To access a controller in your program you can store the controller inside a var
 	import controlP5.*;
 	ControlP5 cp5;
 	Slider slider;
-	
+
 	void setup() {
 		size(400,400);
 		cp5 = new ControlP5(this);
@@ -226,19 +226,19 @@ import controlP5.*;
 ControlP5 cp5;
 
 void setup() {
-  
+
   size(400, 400);
   cp5 = new ControlP5(this);
   cp5.addSlider("s1")
      .setPosition(20, 100)
      .setSize(200, 20);
-     
+
   cp5.addSlider("s2")
      .setPosition(20, 130)
      .setSize(200, 20)
      .moveTo("extra")
      ;
-     
+
 }
 
 void draw() {
@@ -265,7 +265,7 @@ void draw() {
   - **DropdownList** (use ScrollableList instead)
   - **Group** for grouping and nesting controllers [ControlP5group](examples/controllers/ControlP5group/ControlP5group.pde)
   - **Icon** adds Icon support, an Icon behaves like a Button or Toggle [ControlP5icon](examples/controllers/ControlP5icon/ControlP5icon.pde)
-  - **ListBox** (use ScrollableList instead)  
+  - **ListBox** (use ScrollableList instead)
   - **Knob** a rotary slider, mousewheel support [ControlP5knob](examples/controllers/ControlP5knob/ControlP5knob.pde)
   - **Matrix** a 2D array of toggles [ControlP5matrix](examples/controllers/ControlP5matrix/ControlP5matrix.pde)
   - **Numberbox** changes values when dragging horizontally or vertically, mousewheel support [ControlP5numberbox](examples/controllers/ControlP5numberbox/ControlP5numberbox.pde)
@@ -358,12 +358,12 @@ Currently there is no javascript version of ControlP5, though I had started impl
 
 ## <a name="issues"></a>Problems and Issues
 
-In case you run into problems and issues, please use ControlP5's issues section that comes with this repository. Many questions might already have been answered in the [Processing forum](http://forum.processing.org/two/discussions) and you might find quick help and pointers by [searching for controlP5](http://forum.processing.org/two/search?Search=controlp5) or going through the [list of posts tagged with controlP5](http://forum.processing.org/two/discussions/tagged/controlp5). 
+In case you run into problems and issues, please use ControlP5's issues section that comes with this repository. Many questions might already have been answered in the [Processing forum](http://forum.processing.org/two/discussions) and you might find quick help and pointers by [searching for controlP5](http://forum.processing.org/two/search?Search=controlp5) or going through the [list of posts tagged with controlP5](http://forum.processing.org/two/discussions/tagged/controlp5).
 
 
 ## <a name="help"></a>Help
 
-If you want to help improve ControlP5, the first place for me to do so would be the source code documentation where supporting comments are desperately needed to create a concise and comprehensive javadoc.  
+If you want to help improve ControlP5, the first place for me to do so would be the source code documentation where supporting comments are desperately needed to create a concise and comprehensive javadoc.
 
 If you have used ControlP5 in any of your projects, let me know, send me details, send me links, send me screeshots.
 

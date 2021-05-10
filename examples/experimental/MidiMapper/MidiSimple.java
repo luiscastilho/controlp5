@@ -20,33 +20,33 @@ public class MidiSimple {
         boolean bAllowsOutput = ( device.getMaxReceivers() != 0 );
         System.out.println( "" + i + "  " + ( bAllowsInput ? "IN " : "   " ) + ( bAllowsOutput ? "OUT " : "    " ) + aInfos[ i ].getName() + ", " + aInfos[ i ].getVendor() + ", "
           + aInfos[ i ].getVersion() + ", " + aInfos[ i ].getDescription() );
-      } 
+      }
       catch ( MidiUnavailableException e ) {
         // device is obviously not available...
         // out(e);
       }
     }
-    
+
     try {
       MidiDevice device;
       device = MidiSystem.getMidiDevice( getMidiDeviceInfo( theDeviceName, false ) );
       device.open();
       Transmitter conTrans = device.getTransmitter();
       conTrans.setReceiver( theReceiver );
-    } 
+    }
     catch ( MidiUnavailableException e ) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     } catch (NullPointerException e) {
       System.out.println("No Midi device ( "+theDeviceName+" ) is available.");
     }
-    
+
   }
-  
+
   public MidiSimple( String theDeviceName ) {
     new MidiSimple(theDeviceName , new MidiInputReceiver( theDeviceName ) );
   }
-  
+
 
   public MidiDevice.Info getMidiDeviceInfo( String strDeviceName, boolean bForOutput ) {
     MidiDevice.Info[] aInfos = MidiSystem.getMidiDeviceInfo();
@@ -59,7 +59,7 @@ public class MidiSimple {
           if ( ( bAllowsOutput && bForOutput ) || ( bAllowsInput && !bForOutput ) ) {
             return aInfos[ i ];
           }
-        } 
+        }
         catch ( MidiUnavailableException e ) {
           // TODO:
         }
@@ -91,7 +91,7 @@ public class MidiSimple {
         System.out.println( "Which note: " + b[ 1 ] );
         System.out.println( "Note pressure: " + b[ 2 ] );
         System.out.println( "---------------------" );
-      } 
+      }
       else {
         // System.out.println("Message length: " + msg.getLength());
         System.out.println( "Note command: " + commandMap.get( b[ 0 ] ) );

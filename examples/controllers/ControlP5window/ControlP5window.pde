@@ -14,16 +14,16 @@ ControlWindow controlWindow;
 public int sliderValue = 40;
 
 void setup() {
-  size(700, 400);  
+  size(700, 400);
 
   cp5 = new ControlP5(this);
 
 
 // PLEASE READ
-// 
-// With controlP5 2.0 the ControlWindow has been removed, 
-// please see the changelog.txt for details. 
-// Instead, see the extra/ControlP5frame example for 
+//
+// With controlP5 2.0 the ControlWindow has been removed,
+// please see the changelog.txt for details.
+// Instead, see the extra/ControlP5frame example for
 // a ControlWindow alternative.
 
 

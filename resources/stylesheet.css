@@ -348,7 +348,7 @@ ul.blockList ul.blockList ul.blockList ul.blockList li.blockListLast {
 }
 table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-top:0px;
-    margin-bottom:1px;  
+    margin-bottom:1px;
 }
 /*
 Table styles
@@ -491,7 +491,7 @@ h1.hidden {
 
 
 
-.toggleList { 
+.toggleList {
     padding:0;
     margin:0;
     margin-top:12px;
@@ -514,23 +514,23 @@ h1.hidden {
     cursor:pointer;
 }
 
-.toggleList dt span { 
+.toggleList dt span {
     border-top:0;
     font-family: monospace;
     padding:0;
     margin:0;
 }
 
- 
+
 .toggleList dd {
     margin:0;
-    padding:0; 
+    padding:0;
     border:0;
 }
 
-html.isjs .toggleList dd { 
+html.isjs .toggleList dd {
     border:0;
-    display: none; 
+    display: none;
 }
 
 .toggleList pre {

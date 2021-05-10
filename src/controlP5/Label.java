@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser
  * General Public License as published by the Free Software
@@ -15,16 +15,16 @@ package controlP5;
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Lesser General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to
  * the Free Software Foundation, Inc., 59 Temple Place,
  * Suite 330, Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PFont;
@@ -33,11 +33,11 @@ import processing.core.PGraphics;
 /**
  * A custom label using controlP5's BitFonts or PFont based
  * ControlFonts.
- * 
- * 
+ *
+ *
  * @see controlP5.ControlFont
  * @example controllers/ControlP5Textlabel
- * 
+ *
  */
 public class Label implements CDrawable {
 
@@ -443,7 +443,7 @@ public class Label implements CDrawable {
 		return new Label( this );
 	}
 
-	
+
 	public static void setUpperCaseDefault( boolean theValue ) {
 		isToUpperCaseDefault = theValue;
 	}

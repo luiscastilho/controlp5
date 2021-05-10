@@ -6,7 +6,7 @@
  * www.sojamo.de/libraries/controlP5
  *
  */
- 
+
 import controlP5.*;
 
 
@@ -28,13 +28,13 @@ void setup() {
      .setSize(100,10)
      ;
 
-  
+
   cp5.addSlider("slider")
      .setRange(100,200)
      .setValue(128)
      .setPosition(100,160)
      .setSize(100,10);
-     
+
 }
 
 void draw() {

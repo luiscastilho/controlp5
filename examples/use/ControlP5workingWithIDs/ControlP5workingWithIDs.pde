@@ -16,9 +16,9 @@ public int myColorBackground = 40;
 
 void setup() {
   size(400,400);
-  
+
   noStroke();
-  
+
   /* new instance of ControlP5 */
   cp5 = new ControlP5(this);
   /* add 2 controllers and give each of them a unique id. */
@@ -27,7 +27,7 @@ void setup() {
      .setSize(100,14)
      .setId(1)
      .setValue(myColorRect);
-     
+
   cp5.addSlider("slider1")
      .setRange(10,200)
      .setValue(myColorBackground)
@@ -44,7 +44,7 @@ void draw() {
 
 
 void controlEvent(ControlEvent theEvent) {
-  /* events triggered by controllers are automatically forwarded to 
+  /* events triggered by controllers are automatically forwarded to
      the controlEvent method. by checking the id of a controller one can distinguish
      which of the controllers has been changed.
   */
@@ -57,6 +57,6 @@ void controlEvent(ControlEvent theEvent) {
     case(2):
     /* controller slider1 with id 2 */
     myColorBackground = (int)theEvent.getValue();
-    break;  
+    break;
   }
 }

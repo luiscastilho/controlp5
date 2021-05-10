@@ -9,7 +9,7 @@
 
 
 body {
-	font-family : Arial, Helvetica, sans-serif; 
+	font-family : Arial, Helvetica, sans-serif;
     font-size : 12px;
 	font-weight : normal;
 	line-height	: normal;
@@ -56,7 +56,7 @@ body {
 	width:150px;
 	color:#999;
 	line-height:12px;
-	font-weight:normal;	
+	font-weight:normal;
 }
 
 #menu {
@@ -70,7 +70,7 @@ body {
 	position:fixed;
 	left:240px;
 	top:0;
-	
+
 }
 
 
@@ -96,7 +96,7 @@ body {
 #references, #faq {
 	padding-top:20px;
 	padding-right:20px;
-	padding-bottom:20px;	
+	padding-bottom:20px;
 	background:#ddd;
 	border:0;
 }
@@ -226,12 +226,12 @@ h2, h3, h4, h5, th {
 }
 
 
-h3, h4, h5, th { 
+h3, h4, h5, th {
 	font-size:12px;
 }
 
 
-p { 
+p {
 	font-size:12px;
 	margin-bottom:20px;
 	margin-top:10px;
@@ -243,9 +243,9 @@ p.p-small {
 	line-height:13px;
 }
 
-pre, code {  
-	font-family:"Courier New", Courier, monospace; 
-	font-size:1em; 
+pre, code {
+	font-family:"Courier New", Courier, monospace;
+	font-size:1em;
 	line-height:normal;
 }
 
@@ -264,7 +264,7 @@ a {
 }
 
 
-a:hover, 
+a:hover,
 a:active {
 	text-decoration: underline;
 }
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-pre, code {  
+pre, code {
 	color: #000000;
 }
 
@@ -327,7 +327,7 @@ a,strong {
 }
 
 
-a:hover, 
+a:hover,
 a:active {
 	color: #333;
 }
@@ -347,14 +347,14 @@ a:link:visited {
 #download, #download a {
 	background:#00FF92;
 	color:#333;
-	
+
 }
 
 
 #olderversions, #olderversions a {
 	background:#00c66e;
 	color:#333;
-	
+
 }
 
 #references {

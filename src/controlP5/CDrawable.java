@@ -33,5 +33,5 @@ import processing.core.PGraphics;
 public interface CDrawable {
 
 	public void draw( PGraphics theGraphics );
-	
+
 }

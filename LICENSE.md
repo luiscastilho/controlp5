@@ -513,7 +513,7 @@ to dynamic libs are conferred to the ControlP5 SDK. If you have a question about
 this, feel free to either email the author directly or open an issue
 in the project for clarification.
 
-(this exception for the Android operating system has been adopted from 
+(this exception for the Android operating system has been adopted from
 https://github.com/mrRay/vvopensource/blob/master/README.md)
 
 

@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PApplet;
@@ -31,13 +31,13 @@ import processing.core.PGraphics;
 /**
  * Use a Canvas to draw custom graphics into a control
  * window or the default sketch window.
- * 
+ *
  * The Canvas is an abstract class and must be extended by
  * your custom Canvas class, see the ControlP5canvas example
  * for details.
- * 
+ *
  * @example controllers/ControlP5canvas
- * 
+ *
  */
 
 public abstract class Canvas {
@@ -68,7 +68,7 @@ public abstract class Canvas {
 
 	/**
 	 * move a canvas to another controlWindow
-	 * 
+	 *
 	 * @param theControlWindow
 	 */
 	public void moveTo( ControlWindow theControlWindow ) {
@@ -81,7 +81,7 @@ public abstract class Canvas {
 	/**
 	 * get the drawing mode of a Canvas. this can be PRE or
 	 * POST.
-	 * 
+	 *
 	 * @return
 	 */
 	public final int mode( ) {
@@ -103,7 +103,7 @@ public abstract class Canvas {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theMode
 	 */
 	public final void setMode( int theMode ) {

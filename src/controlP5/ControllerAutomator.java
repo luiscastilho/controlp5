@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.lang.reflect.Field;
@@ -101,7 +101,7 @@ class ControllerAutomator {
 
 	/**
 	 * analyzes an object and adds fields with ControlElement annotations to controlP5.
-	 * 
+	 *
 	 */
 	void addControllersFor( final String theAddressSpace , final Object t ) {
 		System.out.println("OKOK");
@@ -162,7 +162,7 @@ class ControllerAutomator {
 							( ( ScrollableList ) cntr ).addItems( params.get( "setItems" ).split( "," ) );
 							( ( ScrollableList ) cntr ).setOpen( false );
 							( ( ScrollableList ) cntr ).setType(ScrollableList.DROPDOWN);
-							
+
 						} else if ( type.equals( ScrollableList.class ) ) {
 
 							cntr = cp5.addScrollableList( t , theAddressSpace , m.getName( ) , ce.x( ) , ce.y( ) , 100 , 100 );
@@ -323,7 +323,7 @@ class ControllerAutomator {
 
 	/**
 	 * capitalizes a string.
-	 * 
+	 *
 	 * @param theString
 	 * @return String
 	 */

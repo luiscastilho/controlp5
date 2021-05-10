@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import processing.core.PGraphics;
@@ -31,7 +31,7 @@ import processing.core.PGraphics;
  * Tabs are used to organize controllers. Tabs are arranged horizontally from the top-left corner by
  * default, Tab extends ControllerGroup, for more available methods see the ControllerGroup
  * documentation. Reposition tabs with {@link controlP5.ControlWindow#setPositionOfTabs(int, int)}
- * 
+ *
  * @example controllers/ControlP5tab
  * @nosuperclasses ControllerGroup ControllerGroup
  */
@@ -48,7 +48,7 @@ public class Tab extends ControllerGroup< Tab > {
 	public boolean autoWidth = true;
 
 	/**
-	 * 
+	 *
 	 * @param theControlP5 ControlP5
 	 * @param theControlWindow ControlWindow
 	 * @param theName String
@@ -99,7 +99,7 @@ public class Tab extends ControllerGroup< Tab > {
 	/**
 	 * set the label of the group. TODO overwriting COntrollerGroup.setLabel to set the Width of a
 	 * tab after renaming. this should be temporary and fixed in the future.
-	 * 
+	 *
 	 * @param theLabel String
 	 * @return Tab
 	 */
@@ -143,7 +143,7 @@ public class Tab extends ControllerGroup< Tab > {
 
 	/**
 	 * Activates a tab.
-	 * 
+	 *
 	 * @param theFlag boolean
 	 */
 	public Tab setActive( boolean theFlag ) {
@@ -158,7 +158,7 @@ public class Tab extends ControllerGroup< Tab > {
 
 	/**
 	 * checks if a tab is active.
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public boolean isActive( ) {
@@ -186,7 +186,7 @@ public class Tab extends ControllerGroup< Tab > {
 	/**
 	 * activates or deactivates the Event status of a tab, When activated a tab will send a
 	 * controlEvent to the main application. By default this is disabled.
-	 * 
+	 *
 	 * @param theFlag boolean
 	 * @return Tab
 	 */

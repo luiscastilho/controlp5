@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.ArrayList;
@@ -36,8 +36,8 @@ import processing.core.PGraphics;
  * height bigger, you get a vertical slider. a slider can have a fixed slider handle (one end of the
  * slider is fixed to the left or bottom side of the controller), or a flexible slider handle (a
  * handle you can drag).
- * 
- * 
+ *
+ *
  * @example controllers/ControlP5slider
  */
 public class Slider extends Controller< Slider > {
@@ -63,7 +63,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * Convenience constructor to extend Slider.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -112,7 +112,7 @@ public class Slider extends Controller< Slider > {
 	/**
 	 * use the slider mode to set the mode of the slider bar, which can be Slider.FLEXIBLE or
 	 * Slider.FIX
-	 * 
+	 *
 	 * @param theMode
 	 *            int
 	 */
@@ -137,7 +137,7 @@ public class Slider extends Controller< Slider > {
 	/**
 	 * sets the size of the Slider handle, by default it is set to either the width or height of the
 	 * slider.
-	 * 
+	 *
 	 * @param theSize
 	 */
 	public Slider setHandleSize( int theSize ) {
@@ -152,7 +152,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * @see ControllerInterface.updateInternalEvents
-	 * 
+	 *
 	 */
 	@ControlP5.Invisible public Slider updateInternalEvents( PApplet theApplet ) {
 		if ( isVisible ) {
@@ -166,7 +166,7 @@ public class Slider extends Controller< Slider > {
 	/**
 	 * the trigger event is set to Slider.PRESSED by default but can be changed to Slider.RELEASE so
 	 * that events are triggered when the slider is released.
-	 * 
+	 *
 	 * @param theEventID
 	 */
 	public Slider setTriggerEvent( int theEventID ) {
@@ -176,7 +176,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * returns the current trigger event which is either Slider.PRESSED or Slider.RELEASE
-	 * 
+	 *
 	 * @return int
 	 */
 	public int getTriggerEvent( ) {
@@ -208,7 +208,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * set the value of the slider.
-	 * 
+	 *
 	 * @param theValue
 	 *            float
 	 */
@@ -246,7 +246,7 @@ public class Slider extends Controller< Slider > {
 	 * sets the sensitivity for the scroll behavior when using the mouse wheel or the scroll
 	 * function of a multi-touch track pad. The smaller the value (closer to 0) the higher the
 	 * sensitivity. by default this value is set to 0.1
-	 * 
+	 *
 	 * @param theValue
 	 * @return Slider
 	 */
@@ -258,7 +258,7 @@ public class Slider extends Controller< Slider > {
 	/**
 	 * changes the value of the slider when hovering and using the mouse wheel or the scroll
 	 * function of a multi-touch track pad.
-	 * 
+	 *
 	 * @param theRotationValue
 	 * @return Slider
 	 */
@@ -281,7 +281,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * sets the minimum value of the slider.
-	 * 
+	 *
 	 * @param theValue
 	 *            float
 	 */
@@ -295,7 +295,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * set the maximum value of the slider.
-	 * 
+	 *
 	 * @param theValue
 	 *            float
 	 */
@@ -326,7 +326,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * set the width of the slider.
-	 * 
+	 *
 	 * @param theValue
 	 *            int
 	 */
@@ -338,7 +338,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * set the height of the slider.
-	 * 
+	 *
 	 * @param theValue
 	 *            int
 	 */
@@ -363,7 +363,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * sets the number of tickmarks for a slider, by default tick marks are turned off.
-	 * 
+	 *
 	 * @param theNumber
 	 */
 	public Slider setNumberOfTickMarks( int theNumber ) {
@@ -386,7 +386,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * returns the amount of tickmarks available for a slider
-	 * 
+	 *
 	 * @return int
 	 */
 	public int getNumberOfTickMarks( ) {
@@ -395,7 +395,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * shows or hides tickmarks for a slider
-	 * 
+	 *
 	 * @param theFlag
 	 * @return Slider
 	 */
@@ -406,7 +406,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * enables or disables snap to tick marks.
-	 * 
+	 *
 	 * @param theFlag
 	 * @return Slider
 	 */
@@ -417,7 +417,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * returns an instance of a tickmark by index.
-	 * 
+	 *
 	 * @see TickMark
 	 * @param theIndex
 	 * @return
@@ -432,7 +432,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * returns an ArrayList of available tick marks for a slider.
-	 * 
+	 *
 	 * @return ArrayList<TickMark>
 	 */
 	public ArrayList< TickMark > getTickMarks( ) {
@@ -449,7 +449,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * sets the color of tick marks if enabled. by default the color is set to white.
-	 * 
+	 *
 	 * @param theColor
 	 * @return Slider
 	 */
@@ -637,7 +637,7 @@ public class Slider extends Controller< Slider > {
 
 	/**
 	 * @see controlP5.Slider#setScrollSensitivity(float)
-	 * 
+	 *
 	 * @param theValue
 	 * @return Slider
 	 */

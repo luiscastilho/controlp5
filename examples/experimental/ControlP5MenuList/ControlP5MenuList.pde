@@ -1,7 +1,7 @@
 
 /**
  * ControlP5 MenuList
- * 
+ *
  * A custom Controller, a scrollable Menu List, using a PGraphics buffer.
  * Allows custom designs for List Item.
  *
@@ -9,7 +9,7 @@
  * www.sojamo.de/libraries/controlp5
  *
  */
- 
+
 import controlP5.*;
 import static controlP5.ControlP5.*;
 import java.util.*;
@@ -25,13 +25,13 @@ void setup() {
   f2 = createFont("Helvetica", 12);
 
   cp5 = new ControlP5( this );
-  
-  
-  /* create a custom MenuList with name menu, notice that function 
+
+
+  /* create a custom MenuList with name menu, notice that function
    * menu will be called when a menu item has been clicked.
    */
   MenuList m = new MenuList( cp5, "menu", 200, 368 );
-  
+
   m.setPosition(40, 40);
   // add some items to our menuList
   for (int i=0;i<100;i++) {
@@ -39,7 +39,7 @@ void setup() {
   }
 }
 
-/* a convenience function to build a map that contains our key-value pairs which we will 
+/* a convenience function to build a map that contains our key-value pairs which we will
  * then use to render each item of the menuList.
  */
 Map<String, Object> makeItem(String theHeadline, String theSubline, String theCopy, PImage theImage) {
@@ -67,12 +67,12 @@ void draw() {
 }
 
 
-/* A custom Controller that implements a scrollable menuList. Here the controller 
+/* A custom Controller that implements a scrollable menuList. Here the controller
  * uses a PGraphics element to render customizable list items. The menuList can be scrolled
- * using the scroll-wheel, touchpad, or mouse-drag. Items are triggered by a click. clicking 
- * the scrollbar to the right makes the list scroll to the item correspoinding to the 
- * click-location. 
- */ 
+ * using the scroll-wheel, touchpad, or mouse-drag. Items are triggered by a click. clicking
+ * the scrollbar to the right makes the list scroll to the item correspoinding to the
+ * click-location.
+ */
 class MenuList extends Controller<MenuList> {
 
   float pos, npos;
@@ -146,29 +146,29 @@ class MenuList extends Controller<MenuList> {
     menu.endDraw();
     updateMenu = abs(npos-pos)>0.01 ? true:false;
   }
-  
-  /* when detecting a click, check if the click happend to the far right, if yes, scroll to that position, 
+
+  /* when detecting a click, check if the click happend to the far right, if yes, scroll to that position,
    * otherwise do whatever this item of the list is supposed to do.
    */
   public void onClick() {
     if (getPointer().x()>getWidth()-10) {
       npos= -map(getPointer().y(), 0, getHeight(), 0, items.size()*itemHeight);
       updateMenu = true;
-    } 
+    }
     else {
       int len = itemHeight * items.size();
       int index = int( map( getPointer().y() - pos, 0, len, 0, items.size() ) ) ;
       setValue(index);
     }
   }
-  
+
   public void onMove() {
   }
 
   public void onDrag() {
     npos += getPointer().dy() * 2;
     updateMenu = true;
-  } 
+  }
 
   public void onScroll(int n) {
     npos += ( n * 4 );
@@ -179,7 +179,7 @@ class MenuList extends Controller<MenuList> {
     items.add(m);
     updateMenu = true;
   }
-  
+
   Map<String,Object> getItem(int theIndex) {
     return items.get(theIndex);
   }

@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ import controlP5.ControlP5.Invisible;
 
 /**
  * A range slider works just like a slider but can be adjusted on both ends.
- * 
+ *
  * @see Slider
  * @example controllers/ControlP5range
  * @nosuperclasses Controller Controller
@@ -73,7 +73,7 @@ public class Range extends Controller< Range > {
 
 	/**
 	 * Convenience constructor to extend Range.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -84,7 +84,7 @@ public class Range extends Controller< Range > {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param theControlP5 ControlP5
 	 * @param theParent ControllerGroup
 	 * @param theName String
@@ -207,11 +207,11 @@ public class Range extends Controller< Range > {
 	/**
 	 * set the value of the range-slider. to set the low and high value, use setLowValue and
 	 * setHighValue or setRangeValues
-	 * 
+	 *
 	 * @see #setLowValue(float)
 	 * @see #setHighValue(float)
 	 * @see #setRangeValues(float, float)
-	 * 
+	 *
 	 * @param theValue float
 	 * @return Range
 	 */
@@ -489,7 +489,7 @@ public class Range extends Controller< Range > {
 		}
 
 	}
-	
+
 	@Override public Range setFont( PFont thePFont ) {
 		_myHighValueLabel.setFont( thePFont );
 		return super.setFont( thePFont );
@@ -499,7 +499,7 @@ public class Range extends Controller< Range > {
 		_myHighValueLabel.setFont( theFont );
 		return super.setFont( theFont );
 	}
-	
+
 	@Override @ControlP5.Invisible public String toString( ) {
 		return "type:\tRange\n" + super.toString( );
 	}

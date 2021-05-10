@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.io.UnsupportedEncodingException;
@@ -36,8 +36,8 @@ public class CP {
 
 	/**
 	 * borrowed from http://www.javapractices.com/Topic96.cjp
-	 * 
-	 * 
+	 *
+	 *
 	 * @param aURLFragment String
 	 * @return String
 	 */
@@ -53,7 +53,7 @@ public class CP {
 
 	/**
 	 * borrowed from http://www.javapractices.com/Topic96.cjp
-	 * 
+	 *
 	 * @param aTagFragment String
 	 * @return String
 	 */
@@ -88,7 +88,7 @@ public class CP {
 	/**
 	 * http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Programs;action=
 	 * display;num=1159828167;start=0#0
-	 * 
+	 *
 	 * @param string String
 	 * @return String
 	 */
@@ -128,7 +128,7 @@ public class CP {
 
 	/**
 	 * convert a hex number into an int
-	 * 
+	 *
 	 * @param theHex
 	 * @return
 	 */
@@ -174,7 +174,7 @@ public class CP {
 
 	/**
 	 * * Convenience method for producing a simple textual representation of an array.
-	 * 
+	 *
 	 * <P>
 	 * The format of the returned <code>String</code> is the same as
 	 * <code>AbstractCollection.toString</code>:
@@ -183,12 +183,12 @@ public class CP {
 	 * <li>empty array: []
 	 * <li>null array: null
 	 * </ul>
-	 * 
-	 * 
+	 *
+	 *
 	 * <code>aArray</code> is a possibly-null array whose elements are primitives or objects; arrays
 	 * of arrays are also valid, in which case <code>aArray</code> is rendered in a nested,
 	 * recursive fashion.
-	 * 
+	 *
 	 * @author Jerome Lacoste
 	 * @author www.javapractices.com
 	 */
@@ -247,7 +247,7 @@ public class CP {
 		return c.toString( ).startsWith( pattern ) ? c.toString( ).substring( pattern.length( ) ) : c.toString( );
 	}
 
-	
+
 	static public boolean inside( int[] theRect , float theX , float theY ) {
 		if ( theRect.length == 4 ) {
 			return ( theX > theRect[ 0 ] && theX < theRect[ 2 ] && theY > theRect[ 1 ] && theY < theRect[ 3 ] );
@@ -258,7 +258,7 @@ public class CP {
 
 	/* Base64 static methods to encode and decode
 	 * bytes into a String and back
-	 * 
+	 *
 	 * from
 	 * http://examples.oreilly.com/javacrypt/files/oreilly/jonathan/util/
 	 * http://oreilly.com/catalog/javacrypt/chapter/ch06.html */
@@ -355,7 +355,7 @@ public class CP {
 		byte[] ret = new byte[ 2 ];
 		ret[ 1 ] = ( byte ) ( a & 0xFF );
 		ret[ 0 ] = ( byte ) ( ( a >> 8 ) & 0xFF );
-		//ret[0] = (byte) ((a >> 16) & 0xFF);   
+		//ret[0] = (byte) ((a >> 16) & 0xFF);
 		//ret[0] = (byte) ((a >> 24) & 0xFF);
 		return ret;
 	}

@@ -1,14 +1,14 @@
 /**
  * ControlP5 DrawIntoCanvas
  *
- * this example demonstrates how to draw into a Canvas. 
+ * this example demonstrates how to draw into a Canvas.
  * Click and drag the mouse to show and draw into the Canvas.
  *
  * by Andreas Schlegel, 2011
  * www.sojamo.de/libraries/controlp5
  *
  */
- 
+
 import controlP5.*;
 
 ControlP5 cp5;
@@ -17,7 +17,7 @@ Canvas cc;
 
 // your controlWindowCanvas class
 class MyCanvas extends Canvas {
-  
+
   boolean mousePressed;
   int mouseX, mouseY;
   public void update(PApplet theApplet) {
@@ -25,7 +25,7 @@ class MyCanvas extends Canvas {
     mouseX = theApplet.mouseX;
     mouseY = theApplet.mouseY;
   }
-  
+
   public void draw(PGraphics theApplet) {
     theApplet.background(255);
      // a rectangle will be drawn if the mouse has been
@@ -48,7 +48,7 @@ class MyCanvas extends Canvas {
       theApplet.fill(255,0,0);
       theApplet.ellipse(mouseX,mouseY,20,20);
     }
-    
+
   }
 
 }

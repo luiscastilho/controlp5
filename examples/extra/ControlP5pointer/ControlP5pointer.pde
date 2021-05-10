@@ -3,7 +3,7 @@
 *
 * Default mouse actions use the Pointer class to trigger events.
 * you can manipulate the x and y fields of the Pointer class
-* for customizing input events for example when using a 
+* for customizing input events for example when using a
 * different input than the mouse.
 * Here in this example the mouse coordiates are reveresed.
 *
@@ -20,13 +20,13 @@ void setup() {
   size(400, 600);
 
   cp5 = new ControlP5(this);
-  // disable outodraw because we want to draw our 
+  // disable outodraw because we want to draw our
   // custom cursor on to of controlP5
   cp5.setAutoDraw(false);
-  
+
   cp5.addSlider("hello", 0, 100, 50, 40, 40, 100, 20);
-  
-  // enable the pointer (and disable the mouse as input) 
+
+  // enable the pointer (and disable the mouse as input)
   cp5.getPointer().enable();
   cp5.getPointer().set(width/2, height/2);
 }
@@ -36,7 +36,7 @@ void draw() {
   background(cp5.get("hello").getValue());
   // first draw controlP5
   cp5.draw();
-  
+
   // the draw our pointer
   cp5.getPointer().set(width - mouseX, height - mouseY);
   pushMatrix();

@@ -3,7 +3,7 @@
  *
  * by jeffg 2011
  */
- 
+
 import peasy.*;
 import controlP5.*;
 import processing.opengl.*;
@@ -35,9 +35,9 @@ void draw() {
   popMatrix();
   // makes the gui stay on top of elements
   // drawn before.
- 
+
   gui();
-  
+
 }
 
 void gui() {

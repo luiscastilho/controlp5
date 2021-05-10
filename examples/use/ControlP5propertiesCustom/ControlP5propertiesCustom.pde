@@ -3,20 +3,20 @@
  * by andreas schlegel, 2011
  *
  * status: experimental
- * saves/loads controller values into/from a properties-file 
+ * saves/loads controller values into/from a properties-file
  * by default properties will be saved in a serialized format and use the .ser extension.
  *
  * taken from the changelog;
- * adding saveProperties(String) and loadProperties(String) to 
- * save and load serialized controller properties. 
+ * adding saveProperties(String) and loadProperties(String) to
+ * save and load serialized controller properties.
  * The range of controllers implementing save/load properties currently includes
- * Slider, Knob, Numberbox, Toggle, Checkbox, RadioButton, Textlabel, Matrix,Range, 
- * textarea, ListBox, Dropdown, colorPicker. 
- * Properties are currently saved in the java serialization 
+ * Slider, Knob, Numberbox, Toggle, Checkbox, RadioButton, Textlabel, Matrix,Range,
+ * textarea, ListBox, Dropdown, colorPicker.
+ * Properties are currently saved in the java serialization
  * format but xml and possibly json alternatives are being worked on.
  *
  *
- * default properties load/save key combinations are 
+ * default properties load/save key combinations are
  * alt+shift+l to load properties
  * alt+shift+s to save properties
  *
@@ -52,8 +52,8 @@ void setup() {
      .setSize(20,100)
      .setNumberOfTickMarks(5)
      ;
-  
-  
+
+
   // add horizontal sliders
   cp5.addSlider("sliderValue")
      .setRange(0,255)
@@ -61,7 +61,7 @@ void setup() {
      .setPosition(200,180)
      .setSize(100,20)
      ;
-  
+
   cp5.addSlider("sliderTicks2")
      .setRange(0,255)
      .setValue(128)
@@ -69,21 +69,21 @@ void setup() {
      .setSize(100,20)
      .setNumberOfTickMarks(7)
      .setSliderMode(Slider.FLEXIBLE);
-     ;   
+     ;
   // use Slider.FIX or Slider.FLEXIBLE to change the slider handle
   // by default it is Slider.FIX
-  
+
 }
 
 void draw() {
   background(sliderTicks1);
-  
+
   fill(sliderValue);
   rect(0,0,width,100);
-  
+
   fill(myColor);
   rect(0,300,width,70);
-  
+
   fill(sliderTicks2);
   rect(0,370,width,30);
 }
@@ -94,7 +94,7 @@ public void slider(float theColor) {
 }
 
 void keyPressed() {
-  // default properties load/save key combinations are 
+  // default properties load/save key combinations are
   // alt+shift+l to load properties
   // alt+shift+s to save properties
   if(key=='1') {

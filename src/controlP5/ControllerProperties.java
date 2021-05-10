@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.io.ByteArrayOutputStream;
@@ -63,7 +63,7 @@ import processing.data.JSONObject;
 
 /**
  * Values of controllers can be stored inside properties files which can be saved to file or memory.
- * 
+ *
  * @example controllers/ControlP5properties
  */
 public class ControllerProperties {
@@ -71,14 +71,14 @@ public class ControllerProperties {
 	public final static int OPEN = 0;
 	public final static int CLOSE = 1;
 	public static String defaultName = "controlP5";
-	
-	
+
+
 	PropertiesStorageFormat format;
 
 	/**
 	 * all ControllerProperties will be stored inside Map allProperties. ControllerProperties need to be unique or will
 	 * otherwise be overwritten.
-	 * 
+	 *
 	 * A hashSet containing names of PropertiesSets is assigned to each ControllerProperty. HashSets are used instead of
 	 * ArrayList to only allow unique elements.
 	 */
@@ -110,7 +110,7 @@ public class ControllerProperties {
 
 	/**
 	 * adds a property based on names of setter and getter methods of a controller.
-	 * 
+	 *
 	 * @param thePropertySetter
 	 * @param thePropertyGetter
 	 */
@@ -129,7 +129,7 @@ public class ControllerProperties {
 	 * registering a property with only one parameter assumes that there is a setter and getter function present for the
 	 * Controller. register("value") for example would create a property reference to setValue and getValue. Notice that
 	 * the first letter of value is being capitalized.
-	 * 
+	 *
 	 * @param theProperty
 	 * @return
 	 */
@@ -347,7 +347,7 @@ public class ControllerProperties {
 	/**
 	 * logs all registered properties in memory. Here, clones of properties are stored inside a map and can be accessed
 	 * by key using the getLog method.
-	 * 
+	 *
 	 * @see controlP5.ControllerProperties#getSnapshot(String)
 	 * @param theKey
 	 * @return ControllerProperties
@@ -414,7 +414,7 @@ public class ControllerProperties {
 
 	/**
 	 * restores properties previously stored as snapshot in memory.
-	 * 
+	 *
 	 * @see controlP5.ControllerProperties#setSnapshot(String)
 	 */
 	public ControllerProperties getSnapshot( String theKey ) {
@@ -447,7 +447,7 @@ public class ControllerProperties {
 	public boolean load( String thePropertiesPath ) {
 		return format.load( getPathWithExtension( format , controlP5.checkPropertiesPath( thePropertiesPath ) ) );
 	}
-	
+
 	/**
 	 * use ControllerProperties.SERIALIZED, ControllerProperties.XML or ControllerProperties.JSON as parameter.
 	 */

@@ -8,7 +8,7 @@
  * force the next controller to the next line.
  * the example shows as well how to link variables and functions to
  * a controller. this is done by assigning the name of the variable
- * or function to a controller.  
+ * or function to a controller.
  *
  * by Andreas Schlegel, 2012
  * www.sojamo.de/libraries/controlp5

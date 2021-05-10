@@ -7,7 +7,7 @@
  * the mouseWheel support.
  *
  * With early versions of the processing 2.0 beta releases the keyEvent forwarding
- * does not work as expected and needs to be forwarded manually. 
+ * does not work as expected and needs to be forwarded manually.
  *
  * by Andreas Schlegel, 2012
  * www.sojamo.de/libraries/controlp5
@@ -44,19 +44,19 @@ void setup() {
   for(int i=0;i<100;i++) {
     drops.add("item "+i);
   }
-  
+
   cp5.addDropdownList("drop")
      .setPosition(300, 30)
      .setWidth(200)
      .addItems(drops)
      ;
-  
+
   cp5.addListBox("list")
      .setPosition(520, 30)
      .setSize(150,200)
      .addItems(drops)
      ;
-     
+
   cp5.addTextarea("area")
      .setPosition(300, 150)
      .setSize(200,100)
@@ -64,23 +64,23 @@ void setup() {
      .setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat porttitor tempus. Donec hendrerit aliquam mauris, a interdum ante pellentesque et. In dui erat, condimentum et sodales eget, scelerisque quis libero. Nam non nibh vitae enim auctor fringilla sit amet quis magna. Quisque ultricies mi at arcu vulputate imperdiet tristique purus adipiscing. Maecenas pretium odio ac leo aliquam id commodo nulla eleifend. Aenean in pharetra mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla suscipit, nisl vitae eleifend tincidunt, dolor justo sollicitudin nunc, sit amet rhoncus odio purus eu purus. Cras bibendum placerat elementum. Donec in lorem libero. Praesent auctor, felis quis volutpat facilisis, neque turpis tempor nisi, interdum viverra enim purus vel mi. Nam faucibus accumsan lorem, convallis consectetur elit vulputate ut.");
      ;
   // add mousewheel support, now hover the slide with your mouse
-  // and use the mousewheel (or trackpad on a macbook) to change the 
-  // value of the slider.   
+  // and use the mousewheel (or trackpad on a macbook) to change the
+  // value of the slider.
   addMouseWheelListener();
 }
 
 
 void draw() {
   background(0);
-} 
+}
 
 
 void controlEvent(ControlEvent event) {
   println(event);
 }
 
-// When working in desktop mode, you can add mousewheel support for 
-// controlP5 by using java.awt.event.MouseWheelListener and 
+// When working in desktop mode, you can add mousewheel support for
+// controlP5 by using java.awt.event.MouseWheelListener and
 // java.awt.event.MouseWheelEvent
 
 void addMouseWheelListener() {

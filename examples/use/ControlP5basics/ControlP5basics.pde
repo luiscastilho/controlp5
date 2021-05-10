@@ -5,12 +5,12 @@
  * After initializing controlP5 you can add controllers to controlP5.
  * Here we use three numberboxes, one slider and one textfield.
  * The numberbox with name numberboxC will trigger function numberboxC()
- * in the example below. Whenever controlP5 detects a function in your 
+ * in the example below. Whenever controlP5 detects a function in your
  * sketch that corresponds to the name of a controller, it will forward
- * an event to that function. Any event triggered by a controller 
+ * an event to that function. Any event triggered by a controller
  * will be forwarded to function controlEvent in your sketch.
  * related examples ControlP5numberbox, ControlP5slider, ControlP5textfield
- * 
+ *
  * by Andreas Schlegel, 2011
  * www.sojamo.de/libraries/controlp5
  *
@@ -26,7 +26,7 @@ public int myColorBackground = 100;
 void setup() {
   size(400, 400);
   noStroke();
-  
+
   cp5 = new ControlP5(this);
 
   // create a slider
@@ -76,7 +76,7 @@ public void textA(String theValue) {
 }
 
 
-// function controlEvent will be invoked with every value change 
+// function controlEvent will be invoked with every value change
 // in any registered controller
 public void controlEvent(ControlEvent theEvent) {
   println("got a control event from controller with id "+theEvent.getId());

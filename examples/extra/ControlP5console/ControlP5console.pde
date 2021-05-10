@@ -43,9 +43,9 @@ void draw() {
   noStroke();
   ellipseMode(CENTER);
   float n = sin(frameCount*0.01)*300;
-  fill(110, 255,220);  
+  fill(110, 255,220);
   ellipse(width/2, height/2, n , n);
-  
+
   println(frameCount+"\t"+String.format("%.2f", frameRate)+"\t"+String.format("%.2f", n));
 }
 

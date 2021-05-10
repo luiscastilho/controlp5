@@ -1,13 +1,13 @@
 /**
  * ControlP5 Callback
  *
- * The following example demonstrates the CallbackListener and CallbackEvent. 
+ * The following example demonstrates the CallbackListener and CallbackEvent.
  * Here additional information about each available slider will be show when
  * hovering the controller with the mouse. The info will fade out when leaving
- * the controller. 
+ * the controller.
  *
  * When hovering a controller, the mouse pointer will change as well.
- * 
+ *
  * find a list of public methods available for the CallbackEvent Controller
  * at the bottom of this sketch.
  *
@@ -28,7 +28,7 @@ void setup() {
 
   cp5 = new ControlP5(this);
 
-  
+
   // create a new instance of class Info
   // info will be used to display a controller's information and
   // will fade in when a CallbackEvent is invoked.
@@ -41,7 +41,7 @@ void setup() {
           .setValue(50)
           .setPosition(40, 40)
           .setSize(100, 20);
-          
+
   s2 = cp5.addSlider("world")
           .setRange(0, 100)
           .setValue(10)
@@ -49,7 +49,7 @@ void setup() {
           .setSize(100, 20);
 
 
-  // the following CallbackListener will listen to any controlP5 
+  // the following CallbackListener will listen to any controlP5
   // action such as enter, leave, pressed, released, releasedoutside, broadcast
   // see static variables starting with ACTION_ inside class controlP5.ControlP5Constants
 
@@ -73,7 +73,7 @@ void setup() {
   // add the above callback to controlP5
   cp5.addCallback(cb);
 
-  // add another callback to slider s1, callback event will only be invoked for this 
+  // add another callback to slider s1, callback event will only be invoked for this
   // particular controller.
   s1.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
@@ -102,28 +102,28 @@ void keyPressed() {
   //controlP5.removeCallback(cb);
 }
 
-// controlEvent(CallbackEvent) is called whenever a callback 
-// has been triggered. controlEvent(CallbackEvent) is detected by 
+// controlEvent(CallbackEvent) is called whenever a callback
+// has been triggered. controlEvent(CallbackEvent) is detected by
 // controlP5 automatically.
 void controlEvent(CallbackEvent theEvent) {
   if (theEvent.getController().equals(s2)) {
     switch(theEvent.getAction()) {
-      case(ControlP5.ACTION_ENTER): 
+      case(ControlP5.ACTION_ENTER):
       println("Action:ENTER");
       break;
-      case(ControlP5.ACTION_LEAVE): 
+      case(ControlP5.ACTION_LEAVE):
       println("Action:LEAVE");
       break;
-      case(ControlP5.ACTION_PRESSED): 
+      case(ControlP5.ACTION_PRESSED):
       println("Action:PRESSED");
       break;
-      case(ControlP5.ACTION_RELEASED): 
+      case(ControlP5.ACTION_RELEASED):
       println("Action:RELEASED");
       break;
-      case(ControlP5.ACTION_RELEASEDOUTSIDE): 
+      case(ControlP5.ACTION_RELEASEDOUTSIDE):
       println("Action:RELEASED OUTSIDE");
       break;
-      case(ControlP5.ACTION_BROADCAST): 
+      case(ControlP5.ACTION_BROADCAST):
       println("Action:BROADCAST");
       break;
     }
@@ -137,7 +137,7 @@ class Info {
   float n = 0;
   String txt = "";
   Textarea label;
-  
+
   Info() {
     label = cp5.addTextarea("Hello\nWorld")
                .setSize(200,200)
@@ -145,9 +145,9 @@ class Info {
                .setColor(color(255))
                .setColorBackground(color(100,0))
                .setLineHeight(12);
-                   
+
   }
-  
+
   void update() {
     a += (n-a)*0.1;
     label.setColorBackground(color(100,255*a));
@@ -159,19 +159,19 @@ class Info {
 a list of all methods available for the CallbackEvent Controller
  use ControlP5.printPublicMethodsFor(CallbackEvent.class);
  to print the following list into the console.
- 
+
  You can find further details about class CallbackEvent in the javadoc.
- 
+
  Format:
  ClassName : returnType methodName(parameter type)
- 
- 
- controlP5.CallbackEvent : Controller getController() 
- controlP5.CallbackEvent : int getAction() 
- java.lang.Object : String toString() 
- java.lang.Object : boolean equals(Object) 
- 
- 
+
+
+ controlP5.CallbackEvent : Controller getController()
+ controlP5.CallbackEvent : int getAction()
+ java.lang.Object : String toString()
+ java.lang.Object : boolean equals(Object)
+
+
  */
 
 

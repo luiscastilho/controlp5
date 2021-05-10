@@ -26,7 +26,7 @@ void setup() {
      .setSize(150,150)
      .setView(new CircularButton())
      ;
-     
+
   cp5.addButton("world")
      .setPosition(250, 100)
      .setSize(50,50)
@@ -49,14 +49,14 @@ public void world(int theValue) {
 
 /**
  * to define a custom View for a controller use the ContollerView<T> interface
- * T here must be replace by the name of the Controller class your custom View will be 
- * applied to. In our example T is replace by Button since we are aplpying the View 
+ * T here must be replace by the name of the Controller class your custom View will be
+ * applied to. In our example T is replace by Button since we are aplpying the View
  * to the Button instance create in setup. The ControllerView interface requires
  * you to implement the display(PApplet, T) method. Same here, T must be replaced by
- * the Controller class you are designing the custom view for, for us this is the 
- * Button class. 
+ * the Controller class you are designing the custom view for, for us this is the
+ * Button class.
  */
- 
+
 class CircularButton implements ControllerView<Button> {
 
   public void display(PGraphics theApplet, Button theButton) {
@@ -70,16 +70,16 @@ class CircularButton implements ControllerView<Button> {
     } else { // the mouse is located outside the button area
       theApplet.fill(ControlP5.GREEN);
     }
-    
+
     theApplet.ellipse(0, 0, theButton.getWidth(), theButton.getHeight());
-    
-    // center the caption label 
+
+    // center the caption label
     int x = theButton.getWidth()/2 - theButton.getCaptionLabel().getWidth()/2;
     int y = theButton.getHeight()/2 - theButton.getCaptionLabel().getHeight()/2;
-    
+
     translate(x, y);
     theButton.getCaptionLabel().draw(theApplet);
-    
+
     theApplet.popMatrix();
   }
 }

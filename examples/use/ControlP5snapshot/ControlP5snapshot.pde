@@ -45,7 +45,7 @@ void setup() {
   .setRange(60,140)
   .setValue(100)
   ;
-  
+
 
   cp5.addKnob("k")
   .setPosition(200, 100)
@@ -62,7 +62,7 @@ void setup() {
   .setRange(0, 200)
   .setRangeValues(50,100)
   ;
-} 
+}
 
 
 void draw() {
@@ -91,7 +91,7 @@ void keyPressed() {
     case('d'):
     cp5.getProperties().getSnapshot("hello3");
     break;
-    
+
     case('z'):
     cp5.getProperties().removeSnapshot("hello1");
     break;
@@ -101,7 +101,7 @@ void keyPressed() {
     case('c'):
     cp5.getProperties().removeSnapshot("hello3");
     break;
-    
+
     case('i'):
     cp5.getProperties().saveSnapshot("hello1");
     break;
@@ -126,37 +126,37 @@ Format:
 ClassName : returnType methodName(parameter type)
 
 
-controlP5.ControllerProperties : ArrayList getSnapshotIndices() 
-controlP5.ControllerProperties : ControllerProperties addSet(String) 
-controlP5.ControllerProperties : ControllerProperties delete(ControllerProperty) 
-controlP5.ControllerProperties : ControllerProperties getSnapshot(String) 
-controlP5.ControllerProperties : ControllerProperties move(ControllerInterface, String, String) 
-controlP5.ControllerProperties : ControllerProperties move(ControllerProperty, String, String) 
-controlP5.ControllerProperties : ControllerProperties only(ControllerProperty, String) 
-controlP5.ControllerProperties : ControllerProperties print() 
-controlP5.ControllerProperties : ControllerProperties register(ControllerInterface, String) 
-controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface) 
-controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface, String) 
-controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface, String, String) 
-controlP5.ControllerProperties : ControllerProperties removeSnapshot(String) 
-controlP5.ControllerProperties : ControllerProperties saveSnapshot(String) 
-controlP5.ControllerProperties : ControllerProperties saveSnapshotAs(String, String) 
-controlP5.ControllerProperties : ControllerProperties setSnapshot(String) 
-controlP5.ControllerProperties : ControllerProperties updateSnapshot(String) 
-controlP5.ControllerProperties : ControllerProperty getProperty(ControllerInterface, String) 
-controlP5.ControllerProperties : ControllerProperty getProperty(ControllerInterface, String, String) 
-controlP5.ControllerProperties : ControllerProperty register(ControllerInterface, String, String) 
-controlP5.ControllerProperties : HashSet getPropertySet(ControllerInterface) 
-controlP5.ControllerProperties : List get(ControllerInterface) 
-controlP5.ControllerProperties : Map get() 
-controlP5.ControllerProperties : String toString() 
-controlP5.ControllerProperties : boolean load() 
-controlP5.ControllerProperties : boolean load(String) 
-controlP5.ControllerProperties : boolean save() 
-controlP5.ControllerProperties : boolean saveAs(String) 
-controlP5.ControllerProperties : void setFormat(Format) 
-java.lang.Object : String toString() 
-java.lang.Object : boolean equals(Object) 
+controlP5.ControllerProperties : ArrayList getSnapshotIndices()
+controlP5.ControllerProperties : ControllerProperties addSet(String)
+controlP5.ControllerProperties : ControllerProperties delete(ControllerProperty)
+controlP5.ControllerProperties : ControllerProperties getSnapshot(String)
+controlP5.ControllerProperties : ControllerProperties move(ControllerInterface, String, String)
+controlP5.ControllerProperties : ControllerProperties move(ControllerProperty, String, String)
+controlP5.ControllerProperties : ControllerProperties only(ControllerProperty, String)
+controlP5.ControllerProperties : ControllerProperties print()
+controlP5.ControllerProperties : ControllerProperties register(ControllerInterface, String)
+controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface)
+controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface, String)
+controlP5.ControllerProperties : ControllerProperties remove(ControllerInterface, String, String)
+controlP5.ControllerProperties : ControllerProperties removeSnapshot(String)
+controlP5.ControllerProperties : ControllerProperties saveSnapshot(String)
+controlP5.ControllerProperties : ControllerProperties saveSnapshotAs(String, String)
+controlP5.ControllerProperties : ControllerProperties setSnapshot(String)
+controlP5.ControllerProperties : ControllerProperties updateSnapshot(String)
+controlP5.ControllerProperties : ControllerProperty getProperty(ControllerInterface, String)
+controlP5.ControllerProperties : ControllerProperty getProperty(ControllerInterface, String, String)
+controlP5.ControllerProperties : ControllerProperty register(ControllerInterface, String, String)
+controlP5.ControllerProperties : HashSet getPropertySet(ControllerInterface)
+controlP5.ControllerProperties : List get(ControllerInterface)
+controlP5.ControllerProperties : Map get()
+controlP5.ControllerProperties : String toString()
+controlP5.ControllerProperties : boolean load()
+controlP5.ControllerProperties : boolean load(String)
+controlP5.ControllerProperties : boolean save()
+controlP5.ControllerProperties : boolean saveAs(String)
+controlP5.ControllerProperties : void setFormat(Format)
+java.lang.Object : String toString()
+java.lang.Object : boolean equals(Object)
 
 
 */

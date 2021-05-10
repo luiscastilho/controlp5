@@ -1,13 +1,13 @@
 /**
- * ControlP5 Behavior 
- * ControlBehavior is an abstract class that can be extended using your 
+ * ControlP5 Behavior
+ * ControlBehavior is an abstract class that can be extended using your
  * custom control behaviors. What is a control behavior? Control Behaviors
  * allow you to automate and dynamically change the state or value of a
  * controller. One behavior per controller is currently supported. i case you
  * need to use more that one bahavior, the implementation has to happen
  * on your side - inside your control behavior.
  *
- * find a list of public methods available for the ControlBehavior Controller 
+ * find a list of public methods available for the ControlBehavior Controller
  * at the bottom of this sketch.
  *
  * by Andreas Schlegel, 2012
@@ -34,18 +34,18 @@ void setup() {
      .setValue(128)
      .setPosition(100, 50 + height/2)
      .setSize(40, 100);
-     
+
   cp5.addSlider("slider")
      .setRange(100, 255)
      .setValue(128)
      .setPosition(100, 50)
      .setSize(100, 40);
-     
+
 
   cp5.addBang("bang")
      .setPosition(40, 50 + height/2)
      .setSize(40, 40);
-     
+
   // add a custom ControlBehavior to controller bang,
   // class TimerEvent is included in this sketch at the bottom
   // and extends abstract class ControlBehavior.
@@ -54,7 +54,7 @@ void setup() {
   // use an anonymous class of type ControlBehavior.
   cp5.getController("slider").setBehavior(new ControlBehavior() {
     float a = 0;
-    public void update() { 
+    public void update() {
       setValue(sin(a += 0.1) * 50  + 150);
     }
   }
@@ -84,16 +84,16 @@ class TimedEvent extends ControlBehavior {
   long myTime;
   int interval = 200;
 
-  public TimedEvent() { 
+  public TimedEvent() {
     reset();
   }
-  void reset() { 
+  void reset() {
     myTime = millis() + interval;
   }
 
   public void update() {
-    if (millis()>myTime) { 
-      setValue(1); 
+    if (millis()>myTime) {
+      setValue(1);
       reset();
     }
   }
@@ -113,12 +113,12 @@ Format:
 ClassName : returnType methodName(parameter type)
 
 
-controlP5.ControlBehavior : Controller controller() 
-controlP5.ControlBehavior : boolean isActive() 
-controlP5.ControlBehavior : void setActive(boolean) 
-controlP5.ControlBehavior : void setValue(float) 
-java.lang.Object : String toString() 
-java.lang.Object : boolean equals(Object) 
+controlP5.ControlBehavior : Controller controller()
+controlP5.ControlBehavior : boolean isActive()
+controlP5.ControlBehavior : void setActive(boolean)
+controlP5.ControlBehavior : void setValue(float)
+java.lang.Object : String toString()
+java.lang.Object : boolean equals(Object)
 
 
 */

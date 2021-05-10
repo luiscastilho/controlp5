@@ -3,17 +3,17 @@
  *
  * by andreas schlegel, 2011
  * www.sojamo.de/libraries/controlp5
- * 
+ *
  */
- 
+
 import controlP5.*;
-  
+
 ControlP5 cp5;
-  
+
 void setup() {
   size(400,600);
   smooth();
-  
+
   cp5 = new ControlP5(this);
   cp5.addGroup("myGroup")
      .setLabel("Testing Canvas")
@@ -29,10 +29,10 @@ void draw() {
 
 
 class TestCanvas extends Canvas {
-  
+
   float n;
   float a;
-  
+
   public void setup(PGraphics pg) {
     println("starting a test canvas.");
     n = 1;

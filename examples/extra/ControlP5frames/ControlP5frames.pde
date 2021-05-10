@@ -20,8 +20,8 @@ void setup() {
 
   cf1 = addControlFrame( "hello", 200, 200, 20, 20, color( 100 ) );
 
-  // add a slider with an EventListener. When dragging the slider, 
-  // variable bgColor will change accordingly. 
+  // add a slider with an EventListener. When dragging the slider,
+  // variable bgColor will change accordingly.
   cf1.control().addSlider( "s1" ).setRange( 0, 255 ).addListener( new ControlListener() {
     public void controlEvent( ControlEvent ev ) {
       bgColor = color( ev.getValue() );
@@ -34,8 +34,8 @@ void setup() {
 
   cf2 = addControlFrame( "world", 200, 200, 20, 240, color( 100 ) );
 
-  // add a button with an EventListener. When releasing the button, 
-  // variable bgColor will change to color( 255 );  
+  // add a button with an EventListener. When releasing the button,
+  // variable bgColor will change to color( 255 );
   cf2.control().addButton( "b1" ).addListener( new ControlListener() {
     public void controlEvent( ControlEvent ev ) {
       bgColor = color( 255 );
@@ -78,7 +78,7 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight, int th
       p.dispose();
       f.dispose();
     }
-  } 
+  }
   );
   f.setResizable( false );
   f.setVisible( true );
@@ -86,14 +86,14 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight, int th
   // otherwise a nullpointerexception might be caused.
   try {
     Thread.sleep( 100 );
-  } 
+  }
   catch(Exception e) {
   }
   return p;
 }
 
 
-// the ControlFrame class extends PApplet, so we 
+// the ControlFrame class extends PApplet, so we
 // are creating a new processing applet inside a
 // new frame with a controlP5 object loaded
 public class ControlFrame extends PApplet {

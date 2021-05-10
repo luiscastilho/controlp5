@@ -2,9 +2,9 @@ package controlP5;
 
 /**
  * controlP5 is a processing gui library.
- * 
+ *
  * 2006-2015 by Andreas Schlegel
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
@@ -13,16 +13,16 @@ package controlP5;
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General
  * Public License along with this library; if not, write to the
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA 02111-1307 USA
- * 
+ *
  * @author Andreas Schlegel (http://www.sojamo.de)
  * @modified ##date##
  * @version ##version##
- * 
+ *
  */
 
 import java.util.Iterator;
@@ -34,7 +34,7 @@ import processing.core.PGraphics;
 /**
  * Use charts to display float array data as line chart, yet experimental, but see the
  * ControlP5chart example for more details.
- * 
+ *
  * @example controllers/ControlP5chart
  */
 public class Chart extends Controller< Chart > {
@@ -54,7 +54,7 @@ public class Chart extends Controller< Chart > {
 
 	/**
 	 * Convenience constructor to extend Chart.
-	 * 
+	 *
 	 * @example use/ControlP5extendController
 	 * @param theControlP5
 	 * @param theName
@@ -69,7 +69,7 @@ public class Chart extends Controller< Chart > {
 		setRange( 0 , theHeight );
 		_myDataSet = new LinkedHashMap< String , ChartDataSet >( );
 		getCaptionLabel( ).align( LEFT, BOTTOM_OUTSIDE ).paddingX = 0;
-		
+
 	}
 
 	public Chart setRange( float theMin , float theMax ) {
@@ -316,7 +316,7 @@ public class Chart extends Controller< Chart > {
 
 	/**
 	 * ?
-	 * 
+	 *
 	 * @param theValue
 	 * @return
 	 */
@@ -554,7 +554,7 @@ public class Chart extends Controller< Chart > {
 
 /* NOTES what is the difference in meaning between chart and graph
  * http://answers.yahoo.com/question/index?qid=20090101193325AA3mgMl
- * 
+ *
  * more charts to implement: from https://vimeo.com/groups/oaod/videos/60013194 (44:40) scatter
  * plot, star plot, histogram, dendrogram, box plot, physical map, tree, 2d 3d isosurfaces table,
  * half matrix, graph, hierarchical pie, line graph, numeric matrix, heat map, permutation matrix

@@ -6,7 +6,7 @@
  *
  * by andreas schlegel, 2012
  * www.sojamo.de/libraries/controlp5
- * 
+ *
  */
 
 import controlP5.*;
@@ -42,7 +42,7 @@ void setup() {
   cp5.addToggle("toggleAutoClear", true, 180, 100, 90, 20).setCaptionLabel("Auto Clear");
   cp5.addToggle("toggleKeepFocus", true, 280, 100, 90, 20).setCaptionLabel("Keep Focus");
 
-  
+
 }
 
 void draw() {
@@ -80,7 +80,7 @@ void controlEvent(ControlEvent theEvent) {
     t.setText("controlEvent: changing text.");
     if (t.isAutoClear()==false) {
       println(" success!");
-    } 
+    }
     else {
       println(" but Textfield.isAutoClear() is false, could not setText here.");
     }
