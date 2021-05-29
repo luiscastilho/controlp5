@@ -737,6 +737,12 @@ public class ControlP5 extends ControlP5Base {
 		}
 	}
 
+	@ControlP5.Invisible public void draw( PGraphics pg ) {
+		if ( !isAutoDraw( ) ) {
+			controlWindow.draw( pg );
+		}
+	}
+
 	/**
 	 * convenience method to access the main window
 	 * (ControlWindow class).
